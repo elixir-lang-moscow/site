@@ -9,7 +9,7 @@ use Mix.Config
 config :elixir_lang_moscow, ElixirLangMoscow.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "jJOZpXhLC6GzaEtPY8QPbVr9Lcg3GvWmFUgV1SpHcPOi3xCwwozpv0+Ainh5etWd",
+  secret_key_base: "<some development key>",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: ElixirLangMoscow.PubSub,
            adapter: Phoenix.PubSub.PG2]

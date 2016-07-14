@@ -16,10 +16,10 @@ defmodule ElixirLangMoscow.RegistrationController do
   end
 
   defp compare_headers(conn, timepad_body) when is_bitstring(timepad_body) do
+    # TODO: replace this key to the real one and hide it:
     incoming_value = :crypto.hmac(:sha, "test-me", timepad_body) |> Base.encode16
 
-    sha_value =
-      conn.req_headers
+    sha_value = conn.req_headers
       |> Enum.into(%{})
       |> Map.get("x-hub-signature")
       |> String.replace_prefix("sha1=", "")
@@ -37,10 +37,12 @@ defmodule ElixirLangMoscow.RegistrationController do
   end
 
   defp handle_registration(conn, %{"status_raw" => "ok"} = timepad_json, event) do
-    [%{"id" => 1357809, "value" => email},
-     %{"id" => 1357810, "value" => last_name},
-     %{"id" => 1357811, "value" => first_name},
-     %{"id" => 1357819, "value" => company}] = timepad_json["answers"]
+    [
+      %{"id" => 1357809, "value" => email},
+      %{"id" => 1357810, "value" => last_name},
+      %{"id" => 1357811, "value" => first_name},
+      %{"id" => 1357819, "value" => company}
+    ] = timepad_json["answers"]
 
 
     registration_params = %{
