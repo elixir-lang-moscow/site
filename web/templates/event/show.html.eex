@@ -1,0 +1,26 @@
+<h2>Show event</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @event.name %>
+  </li>
+
+  <li>
+    <strong>Location:</strong>
+    <%= @event.location %>
+  </li>
+
+  <li>
+    <strong>Time at:</strong>
+    <%= @event.time_at %>
+  </li>
+
+  <%= for talk <- @event.event_speakers do %>
+    <a href="<%= event_speaker_path(@conn, :show, @event.id, talk.slug) %>">
+      <%= talk.title %>
+    </a>
+  <% end %>
+
+</ul>

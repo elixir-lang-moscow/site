@@ -1,0 +1,25 @@
+<h2>Show event speaker</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @event_speaker.title %>
+  </li>
+
+  <li>
+    <strong>Speaker:</strong>
+    <div>
+      <img src="<%= avatar_url @event_speaker.speaker %>" />
+    </div>
+    <%= @event_speaker.speaker.name %>
+  </li>
+
+  <li>
+    <strong>Event:</strong>
+    <a href="<%= event_path(@conn, :show, @event_speaker.event) %>">
+      <%= @event_speaker.event.name %>
+    </a>
+  </li>
+
+</ul>

@@ -1,0 +1,75 @@
+<div class="jumbotron">
+  <h2><%= gettext "Welcome to Elixir community in Moscow!" %></h2>
+
+  <%= if @closest_event != nil do %>
+  <div class="row">
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">
+            <a href="<%= event_path(@conn, :show, @closest_event) %>">
+              <%= @closest_event.name %>
+            </a>
+          </span>
+          <p><%= gettext "Active registartions for now:" %> <%= @active_registrations %></p>
+          <ul>
+            <%= for event_speaker <- @closest_event.event_speakers do %>
+              <li>
+                <a href="<%= event_speaker_path(@conn, :show, @closest_event.id, event_speaker.slug) %>">
+                  <%= event_speaker.title %>
+                </a> by
+                <a href="#"><%= event_speaker.speaker.name %></a>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="card-action">
+          <a class="btn waves-effect waves-light green lighten-3"
+              href="<%= @closest_event.registration_link %>">
+            <%= gettext "Register" %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="well">
+      <h2><%= gettext "Recent events" %></h2>
+
+      <ul>
+
+      <%= for event <- @events do %>
+        <li>
+          <a href="event_path(@conn, :show, event)">
+            <%= event.name %>
+          </a>, <%= event.location %> : <%= event.time_at %>
+        </li>
+      <% end %>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="well">
+      <h2><%= gettext "Recent talks" %></h2>
+
+      <ul>
+
+      <%= for talk <- @recent_talks do %>
+        <li>
+          <a href="#">
+            <%= talk.title %>
+          </a>, <%= talk_speaker(talk) %>
+        </li>
+      <% end %>
+
+      </ul>
+    </div>
+  </div>
+</div>

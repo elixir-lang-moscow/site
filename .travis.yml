@@ -1,0 +1,16 @@
+sudo: false
+
+addons:
+  hosts:
+    - db
+
+elixir:
+  - 1.2
+
+env: MIX_ENV=test
+
+script:
+  - mix.test
+
+notifications:
+  email: false

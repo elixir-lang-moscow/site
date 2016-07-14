@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Elixir Lang Moscow">
+
+    <title>Elixir meetups in Moscow</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+
+  <body>
+    <header>
+        <nav class="deep-purple lighten-1">
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo">Logo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="<%= event_path(@conn, :index) %>"><%= gettext "Events" %></a></li>
+              <li><a href="<%= speaker_path(@conn, :index) %>"><%= gettext "Speakers" %></a></li>
+              <li><a href="/#about"><%= gettext "About" %></a></li>
+              <li><a href="#"><%= gettext "Join" %></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="<%= event_path(@conn, :index) %>"><%= gettext "Events" %></a></li>
+              <li><a href="<%= speaker_path(@conn, :index) %>"><%= gettext "Speakers" %></a></li>
+              <li><a href="/#about"><%= gettext "About" %></a></li>
+              <li><a href="#"><%= gettext "Join" %></a></li>
+            </ul>
+            </ul>
+          </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+
+      <main role="main">
+        <%= render @view_module, @view_template, assigns %>
+      </main>
+    </div>
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<h2>Show speaker</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @speaker.name %>
+  </li>
+
+  <li>
+    <strong>Speaker:</strong>
+    <div>
+      <img src="<%= avatar_url @speaker %>" />
+    </div>
+    <%= @speaker.name %>
+    <%= @speaker.company %>
+  </li>
+
+  <li>
+    <strong>Events:</strong>
+
+    <%= for talk <- @speaker.event_speakers do %>
+    <a href="<%= event_speaker_path(@conn, :show, talk.event.id, talk.slug) %>">
+      <%= talk.title %>;
+    </a>
+    <% end %>
+
+  </li>
+
+</ul>

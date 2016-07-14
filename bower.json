@@ -1,0 +1,22 @@
+{
+  "name": "elixir_lang_moscow",
+  "description": "Site for montly Elixir meetups in Moscow",
+  "main": "",
+  "authors": [
+    "sobolevn <mail@sobolevn.me>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.6"
+  }
+}
