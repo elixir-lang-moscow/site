@@ -1,5 +1,7 @@
 # ElixirLangMoscow
 
+[![Build Status](https://travis-ci.org/elixir-lang-moscow/site.svg?branch=master)](https://travis-ci.org/elixir-lang-moscow/site)
+
 ## Requirements
 
 You will need:
