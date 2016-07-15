@@ -1,6 +1,6 @@
 # ElixirLangMoscow
 
-[![Build Status](https://travis-ci.org/elixir-lang-moscow/site.svg?branch=master)](https://travis-ci.org/elixir-lang-moscow/site)
+[![Build Status](https://travis-ci.org/elixir-lang-moscow/site.svg?branch=master)](https://travis-ci.org/elixir-lang-moscow/site) [![Docker pulls](https://img.shields.io/docker/pulls/elixir_lang_moscow/site.svg)](https://hub.docker.com/r/sobolevn/site/~/dockerfile/)
 
 ## Requirements
 
