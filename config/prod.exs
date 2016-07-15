@@ -16,14 +16,14 @@ use Mix.Config
 #   url: [host: "example.com", port: 80],
 #   cache_static_manifest: "priv/static/manifest.json"
 
-config :hello_phoenix, HelloPhoenix.Endpoint,
+config :elixir_lang_moscow, ElixirLangMoscow.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "peaceful-scrubland-19460.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
-config :hello_phoenix, ElixirLangMoscow.Repo,
+config :elixir_lang_moscow, ElixirLangMoscow.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
