@@ -1,6 +1,18 @@
 {
+  "name": "elixir_lang_moscow",
+  "description": "Site for montly Elixir meetups in Moscow",
+  "main": "",
+  "authors": [
+    "sobolevn <mail@sobolevn.me>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
   "repository": {},
   "dependencies": {
+    "bower": "^1.5.2"
+  },
+  "devDependencies": {
     "babel-brunch": "~6.0.0",
     "brunch": "~2.1.3",
     "clean-css-brunch": "~1.8.0",
