@@ -9,7 +9,6 @@ defmodule ElixirLangMoscow.Avatar do
   # To add a thumbnail version:
   # @versions [:original, :thumb]
   @extension_whitelist ~w(.jpg .jpeg .gif .png)
-  @base_storage_dir "priv/static/media/user/avatars"
 
   # Whitelist file extensions:
   def validate({file, _}) do
@@ -27,18 +26,27 @@ defmodule ElixirLangMoscow.Avatar do
   #   version
   # end
 
-  def __storage, do: Arc.Storage.Local
+  # def __storage, do: Arc.Storage.Local
 
   # Override the storage directory:
-  def storage_dir(_version, {_file, scope}) do
-    @base_storage_dir <> "/#{scope.slug}" # TODO: add slug
-  end
-  def storage_dir(_, {_, nil}) do
-    @base_storage_dir
+  # def storage_dir(_version, {_file, scope}) do
+  #   @base_storage_dir <> "/#{scope.slug}" # TODO: add slug
+  # end
+  # def storage_dir(_, {_, nil}) do
+  #   @base_storage_dir
+  # end
+
+  def storage_dir(version, {file, scope}) do
+    "uploads/avatars/#{scope.slug}"
   end
 
   # Provide a default URL if there hasn't been a file uploaded
   def default_url(version, scope) do
     "http://placehold.it/200x200"
+  end
+
+  def s3_object_headers(version, {file, scope}) do
+    # For "image.png", would produce: "image/png"
+    [content_type: Plug.MIME.path(file.file_name)]
   end
 end

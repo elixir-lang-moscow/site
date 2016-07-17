@@ -18,7 +18,9 @@
                 <a href="<%= event_speaker_path(@conn, :show, @closest_event.id, event_speaker.slug) %>">
                   <%= event_speaker.title %>
                 </a> by
-                <a href="#"><%= event_speaker.speaker.name %></a>
+                <a href="<%= speaker_path(@conn, :show, event_speaker.speaker.slug) %>">
+                  <%= event_speaker.speaker.name %>
+                </a>
               </li>
             <% end %>
           </ul>
@@ -43,7 +45,7 @@
 
       <%= for event <- @events do %>
         <li>
-          <a href="event_path(@conn, :show, event)">
+          <a href="<%= event_path(@conn, :show, event) %>">
             <%= event.name %>
           </a>, <%= event.location %> : <%= event.time_at %>
         </li>
@@ -63,7 +65,7 @@
 
       <%= for talk <- @recent_talks do %>
         <li>
-          <a href="#">
+          <a href="<%= event_speaker_path(@conn, :show, talk.event.id, talk.slug) %>">
             <%= talk.title %>
           </a>, <%= talk_speaker(talk) %>
         </li>

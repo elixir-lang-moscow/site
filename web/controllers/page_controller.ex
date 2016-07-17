@@ -23,7 +23,7 @@ defmodule ElixirLangMoscow.PageController do
       where: v.time_at < ^now,
       order_by: [v.time_at, e.title],
       limit: 10,
-      preload: [:speaker]
+      preload: [:speaker, :event]
 
     Repo.all(query)
   end

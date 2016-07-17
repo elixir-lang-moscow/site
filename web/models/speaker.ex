@@ -37,13 +37,7 @@ defmodule ElixirLangMoscow.Speaker do
 
   def avatar_url(model) do
     definition = {model.avatar, model}
-    parts = ElixirLangMoscow.Avatar.url(definition) |> Path.split
-    path =
-      parts
-      |> Enum.slice(2..length(parts))
-      |> Path.join
-
-    "/" <> path
+    ElixirLangMoscow.Avatar.url(definition)
   end
 
   defp generate_slug(changeset) do

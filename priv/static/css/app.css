@@ -13287,26 +13287,26 @@ label {
 /* Text Inputs + Textarea
    ========================================================================== */
 /* Style Placeholders */
-/* line 6, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 6, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 ::-webkit-input-placeholder {
   color: #d1d1d1; }
 
-/* line 10, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 :-moz-placeholder {
   /* Firefox 18- */
   color: #d1d1d1; }
 
-/* line 14, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 14, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #d1d1d1; }
 
-/* line 18, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 18, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 :-ms-input-placeholder {
   color: #d1d1d1; }
 
 /* Text inputs */
-/* line 24, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 24, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 input:not([type]),
 input[type=text],
 input[type=password],
@@ -13333,7 +13333,7 @@ textarea.materialize-textarea {
   box-shadow: none;
   box-sizing: content-box;
   transition: all 0.3s; }
-  /* line 54, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 54, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]):disabled, input:not([type])[readonly="readonly"],
   input[type=text]:disabled,
   input[type=text][readonly="readonly"],
@@ -13361,7 +13361,7 @@ textarea.materialize-textarea {
   textarea.materialize-textarea[readonly="readonly"] {
     color: rgba(0, 0, 0, 0.26);
     border-bottom: 1px dotted rgba(0, 0, 0, 0.26); }
-  /* line 61, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 61, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]):disabled + label,
   input:not([type])[readonly="readonly"] + label,
   input[type=text]:disabled + label,
@@ -13389,7 +13389,7 @@ textarea.materialize-textarea {
   textarea.materialize-textarea:disabled + label,
   textarea.materialize-textarea[readonly="readonly"] + label {
     color: rgba(0, 0, 0, 0.26); }
-  /* line 67, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 67, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]):focus:not([readonly]),
   input[type=text]:focus:not([readonly]),
   input[type=password]:focus:not([readonly]),
@@ -13405,7 +13405,7 @@ textarea.materialize-textarea {
   textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #26a69a;
     box-shadow: 0 1px 0 0 #26a69a; }
-  /* line 73, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 73, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]):focus:not([readonly]) + label,
   input[type=text]:focus:not([readonly]) + label,
   input[type=password]:focus:not([readonly]) + label,
@@ -13420,7 +13420,7 @@ textarea.materialize-textarea {
   input[type=search]:focus:not([readonly]) + label,
   textarea.materialize-textarea:focus:not([readonly]) + label {
     color: #26a69a; }
-  /* line 78, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 78, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]).valid, input:not([type]):focus.valid,
   input[type=text].valid,
   input[type=text]:focus.valid,
@@ -13448,7 +13448,7 @@ textarea.materialize-textarea {
   textarea.materialize-textarea:focus.valid {
     border-bottom: 1px solid #4CAF50;
     box-shadow: 0 1px 0 0 #4CAF50; }
-  /* line 85, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 85, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]).valid + label:after,
   input:not([type]):focus.valid + label:after,
   input[type=text].valid + label:after,
@@ -13478,7 +13478,7 @@ textarea.materialize-textarea {
     content: attr(data-success);
     color: #4CAF50;
     opacity: 1; }
-  /* line 93, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 93, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]).invalid, input:not([type]):focus.invalid,
   input[type=text].invalid,
   input[type=text]:focus.invalid,
@@ -13506,7 +13506,7 @@ textarea.materialize-textarea {
   textarea.materialize-textarea:focus.invalid {
     border-bottom: 1px solid #F44336;
     box-shadow: 0 1px 0 0 #F44336; }
-  /* line 100, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 100, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]).invalid + label:after,
   input:not([type]):focus.invalid + label:after,
   input[type=text].invalid + label:after,
@@ -13536,7 +13536,7 @@ textarea.materialize-textarea {
     content: attr(data-error);
     color: #F44336;
     opacity: 1; }
-  /* line 108, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 108, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]).validate + label,
   input[type=text].validate + label,
   input[type=password].validate + label,
@@ -13552,7 +13552,7 @@ textarea.materialize-textarea {
   textarea.materialize-textarea.validate + label {
     width: 100%;
     pointer-events: none; }
-  /* line 114, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 114, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   input:not([type]) + label:after,
   input[type=text] + label:after,
   input[type=password] + label:after,
@@ -13573,11 +13573,11 @@ textarea.materialize-textarea {
     opacity: 0;
     transition: .2s opacity ease-out, .2s color ease-out; }
 
-/* line 125, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 125, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 .input-field {
   position: relative;
   margin-top: 1rem; }
-  /* line 129, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 129, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field label {
     color: #9e9e9e;
     position: absolute;
@@ -13586,64 +13586,64 @@ textarea.materialize-textarea {
     font-size: 1rem;
     cursor: text;
     transition: .2s ease-out; }
-  /* line 139, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 139, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field label.active {
     font-size: 0.8rem;
     transform: translateY(-140%); }
-  /* line 145, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 145, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field .prefix {
     position: absolute;
     width: 3rem;
     font-size: 2rem;
     transition: color .2s; }
-    /* line 151, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+    /* line 151, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
     .input-field .prefix.active {
       color: #26a69a; }
-  /* line 154, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 154, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field .prefix ~ input,
   .input-field .prefix ~ textarea {
     margin-left: 3rem;
     width: 92%;
     width: calc(100% - 3rem); }
-  /* line 161, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 161, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field .prefix ~ textarea {
     padding-top: .8rem; }
-  /* line 162, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 162, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field .prefix ~ label {
     margin-left: 3rem; }
   @media only screen and (max-width: 992px) {
-    /* line 165, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+    /* line 165, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
     .input-field .prefix ~ input {
       width: 86%;
       width: calc(100% - 3rem); } }
   @media only screen and (max-width: 600px) {
-    /* line 172, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+    /* line 172, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
     .input-field .prefix ~ input {
       width: 80%;
       width: calc(100% - 3rem); } }
 
 /* Search Field */
-/* line 182, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 182, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 .input-field input[type=search] {
   display: block;
   line-height: inherit;
   padding-left: 4rem;
   width: calc(100% - 4rem); }
-  /* line 188, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 188, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field input[type=search]:focus {
     background-color: #fff;
     border: 0;
     box-shadow: none;
     color: #444; }
-    /* line 194, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+    /* line 194, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
     .input-field input[type=search]:focus + label i,
     .input-field input[type=search]:focus ~ .mdi-navigation-close,
     .input-field input[type=search]:focus ~ .material-icons {
       color: #444; }
-  /* line 201, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 201, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field input[type=search] + label {
     left: 1rem; }
-  /* line 205, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 205, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   .input-field input[type=search] ~ .mdi-navigation-close,
   .input-field input[type=search] ~ .material-icons {
     position: absolute;
@@ -13655,12 +13655,12 @@ textarea.materialize-textarea {
     transition: .3s color; }
 
 /* Textarea */
-/* line 221, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 221, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 textarea {
   width: 100%;
   height: 3rem;
   background-color: transparent; }
-  /* line 226, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+  /* line 226, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
   textarea.materialize-textarea {
     overflow-y: hidden;
     /* prevents scroll bar flash */
@@ -13669,7 +13669,7 @@ textarea {
     resize: none;
     min-height: 3rem; }
 
-/* line 235, /code/bower_components/Materialize/sass/components/forms/_input-fields.scss */
+/* line 235, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_input-fields.scss */
 .hiddendiv {
   display: none;
   white-space: pre-wrap;
@@ -13681,14 +13681,14 @@ textarea {
 
 /* Radio Buttons
    ========================================================================== */
-/* line 5, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 5, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
   left: -9999px;
   opacity: 0; }
 
-/* line 12, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 12, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:not(:checked) + label,
 [type="radio"]:checked + label {
   position: relative;
@@ -13703,7 +13703,7 @@ textarea {
   /* webkit (konqueror) browsers */
   user-select: none; }
 
-/* line 27, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 27, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"] + label:before,
 [type="radio"] + label:after {
   content: '';
@@ -13717,7 +13717,7 @@ textarea {
   transition: .28s ease; }
 
 /* Unchecked styles */
-/* line 41, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 41, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:not(:checked) + label:before,
 [type="radio"]:not(:checked) + label:after,
 [type="radio"]:checked + label:before,
@@ -13726,73 +13726,73 @@ textarea {
 [type="radio"].with-gap:checked + label:after {
   border-radius: 50%; }
 
-/* line 50, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 50, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:not(:checked) + label:before,
 [type="radio"]:not(:checked) + label:after {
   border: 2px solid #5a5a5a; }
 
-/* line 55, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 55, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:not(:checked) + label:after {
   z-index: -1;
   transform: scale(0); }
 
 /* Checked styles */
-/* line 61, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 61, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:checked + label:before {
   border: 2px solid transparent; }
 
-/* line 65, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 65, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:before,
 [type="radio"].with-gap:checked + label:after {
   border: 2px solid #26a69a; }
 
-/* line 71, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 71, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
   background-color: #26a69a;
   z-index: 0; }
 
-/* line 77, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 77, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:checked + label:after {
   transform: scale(1.02); }
 
 /* Radio With gap */
-/* line 82, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 82, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"].with-gap:checked + label:after {
   transform: scale(0.5); }
 
 /* Focused styles */
-/* line 87, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 87, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"].tabbed:focus + label:before {
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1); }
 
 /* Disabled Radio With gap */
-/* line 92, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 92, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"].with-gap:disabled:checked + label:before {
   border: 2px solid rgba(0, 0, 0, 0.26); }
 
-/* line 96, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 96, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"].with-gap:disabled:checked + label:after {
   border: none;
   background-color: rgba(0, 0, 0, 0.26); }
 
 /* Disabled style */
-/* line 102, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 102, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:disabled:not(:checked) + label:before,
 [type="radio"]:disabled:checked + label:before {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.26); }
 
-/* line 108, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 108, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:disabled + label {
   color: rgba(0, 0, 0, 0.26); }
 
-/* line 112, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 112, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:disabled:not(:checked) + label:before {
   border-color: rgba(0, 0, 0, 0.26); }
 
-/* line 116, /code/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
+/* line 116, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_radio-buttons.scss */
 [type="radio"]:disabled:checked + label:after {
   background-color: rgba(0, 0, 0, 0.26);
   border-color: #BDBDBD; }
@@ -13800,27 +13800,27 @@ textarea {
 /* Checkboxes
    ========================================================================== */
 /* CUSTOM CSS CHECKBOXES */
-/* line 5, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 5, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 form p {
   margin-bottom: 10px;
   text-align: left; }
 
-/* line 10, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 form p:last-child {
   margin-bottom: 0; }
 
 /* Remove default checkbox */
-/* line 15, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 15, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
   left: -9999px;
   opacity: 0; }
 
-/* line 23, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 23, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"] {
   /* checkbox aspect */ }
-  /* line 25, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+  /* line 25, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
   [type="checkbox"] + label {
     position: relative;
     padding-left: 35px;
@@ -13837,7 +13837,7 @@ form p:last-child {
     /* webkit (konqueror) browsers */
     -ms-user-select: none;
     /* IE10+ */ }
-  /* line 41, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+  /* line 41, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
   [type="checkbox"] + label:before,
   [type="checkbox"]:not(.filled-in) + label:after {
     content: '';
@@ -13851,15 +13851,15 @@ form p:last-child {
     border-radius: 1px;
     margin-top: 2px;
     transition: .2s; }
-  /* line 56, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+  /* line 56, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
   [type="checkbox"]:not(.filled-in) + label:after {
     border: 0;
     transform: scale(0); }
-  /* line 61, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+  /* line 61, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
   [type="checkbox"]:not(:checked):disabled + label:before {
     border: none;
     background-color: rgba(0, 0, 0, 0.26); }
-  /* line 67, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+  /* line 67, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
   [type="checkbox"].tabbed:focus + label:after {
     transform: scale(1);
     border: 0;
@@ -13867,7 +13867,7 @@ form p:last-child {
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.1); }
 
-/* line 77, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 77, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"]:checked + label:before {
   top: -4px;
   left: -5px;
@@ -13881,13 +13881,13 @@ form p:last-child {
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
 
-/* line 91, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 91, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"]:checked:disabled + label:before {
   border-right: 2px solid rgba(0, 0, 0, 0.26);
   border-bottom: 2px solid rgba(0, 0, 0, 0.26); }
 
 /* Indeterminate checkbox */
-/* line 99, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 99, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"]:indeterminate + label:before {
   top: -11px;
   left: -12px;
@@ -13901,16 +13901,16 @@ form p:last-child {
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
 
-/* line 114, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 114, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"]:indeterminate:disabled + label:before {
   border-right: 2px solid rgba(0, 0, 0, 0.26);
   background-color: transparent; }
 
-/* line 123, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 123, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in + label:after {
   border-radius: 2px; }
 
-/* line 127, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 127, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in + label:before,
 [type="checkbox"].filled-in + label:after {
   content: '';
@@ -13920,7 +13920,7 @@ form p:last-child {
   transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
   z-index: 1; }
 
-/* line 138, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 138, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:not(:checked) + label:before {
   width: 0;
   height: 0;
@@ -13932,7 +13932,7 @@ form p:last-child {
   -webkit-transform-origin: 20% 40%;
   transform-origin: 100% 100%; }
 
-/* line 151, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 151, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:not(:checked) + label:after {
   height: 20px;
   width: 20px;
@@ -13941,7 +13941,7 @@ form p:last-child {
   top: 0px;
   z-index: 0; }
 
-/* line 162, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 162, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:checked + label:before {
   top: 0;
   left: 1px;
@@ -13956,7 +13956,7 @@ form p:last-child {
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%; }
 
-/* line 178, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 178, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:checked + label:after {
   top: 0;
   width: 20px;
@@ -13965,40 +13965,40 @@ form p:last-child {
   background-color: #26a69a;
   z-index: 0; }
 
-/* line 189, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 189, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in.tabbed:focus + label:after {
   border-radius: 2px;
   border-color: #5a5a5a;
   background-color: rgba(0, 0, 0, 0.1); }
 
-/* line 195, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 195, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in.tabbed:checked:focus + label:after {
   border-radius: 2px;
   background-color: #26a69a;
   border-color: #26a69a; }
 
-/* line 202, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 202, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:disabled:not(:checked) + label:before {
   background-color: transparent;
   border: 2px solid transparent; }
 
-/* line 207, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 207, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:disabled:not(:checked) + label:after {
   border-color: transparent;
   background-color: #BDBDBD; }
 
-/* line 212, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 212, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:disabled:checked + label:before {
   background-color: transparent; }
 
-/* line 216, /code/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
+/* line 216, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_checkboxes.scss */
 [type="checkbox"].filled-in:disabled:checked + label:after {
   background-color: #BDBDBD;
   border-color: #BDBDBD; }
 
 /* Switch
    ========================================================================== */
-/* line 4, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+/* line 4, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
 .switch,
 .switch * {
   -webkit-user-select: none;
@@ -14006,24 +14006,24 @@ form p:last-child {
   -khtml-user-select: none;
   -ms-user-select: none; }
 
-/* line 12, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+/* line 12, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
 .switch label {
   cursor: pointer; }
 
-/* line 16, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+/* line 16, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
 .switch label input[type=checkbox] {
   opacity: 0;
   width: 0;
   height: 0; }
-  /* line 21, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+  /* line 21, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
   .switch label input[type=checkbox]:checked + .lever {
     background-color: #84c7c1; }
-    /* line 24, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+    /* line 24, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
     .switch label input[type=checkbox]:checked + .lever:after {
       background-color: #26a69a;
       left: 24px; }
 
-/* line 31, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+/* line 31, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
 .switch label .lever {
   content: "";
   display: inline-block;
@@ -14036,7 +14036,7 @@ form p:last-child {
   transition: background 0.3s ease;
   vertical-align: middle;
   margin: 0 16px; }
-  /* line 44, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+  /* line 44, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
   .switch label .lever:after {
     content: "";
     position: absolute;
@@ -14050,36 +14050,36 @@ form p:last-child {
     top: -3px;
     transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease; }
 
-/* line 60, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+/* line 60, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
 input[type=checkbox]:checked:not(:disabled) ~ .lever:active::after,
 input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::after {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(38, 166, 154, 0.1); }
 
-/* line 65, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+/* line 65, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
 input[type=checkbox]:not(:disabled) ~ .lever:active:after,
 input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.08); }
 
-/* line 71, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+/* line 71, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
 .switch input[type=checkbox][disabled] + .lever {
   cursor: default; }
 
-/* line 75, /code/bower_components/Materialize/sass/components/forms/_switches.scss */
+/* line 75, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_switches.scss */
 .switch label input[type=checkbox][disabled] + .lever:after,
 .switch label input[type=checkbox][disabled]:checked + .lever:after {
   background-color: #BDBDBD; }
 
 /* Select Field
    ========================================================================== */
-/* line 4, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 4, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 select {
   display: none; }
 
-/* line 5, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 5, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 select.browser-default {
   display: block; }
 
-/* line 7, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 7, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 select {
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
@@ -14088,14 +14088,14 @@ select {
   border-radius: 2px;
   height: 3rem; }
 
-/* line 16, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 16, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .select-label {
   position: absolute; }
 
-/* line 20, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 20, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .select-wrapper {
   position: relative; }
-  /* line 23, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+  /* line 23, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
   .select-wrapper input.select-dropdown {
     position: relative;
     cursor: pointer;
@@ -14110,27 +14110,27 @@ select {
     margin: 0 0 15px 0;
     padding: 0;
     display: block; }
-  /* line 39, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+  /* line 39, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
   .select-wrapper span.caret {
     color: initial;
     position: absolute;
     right: 0;
     top: 16px;
     font-size: 10px; }
-    /* line 45, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+    /* line 45, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
     .select-wrapper span.caret.disabled {
       color: rgba(0, 0, 0, 0.26); }
-  /* line 50, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+  /* line 50, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
   .select-wrapper + label {
     position: absolute;
     top: -14px;
     font-size: 0.8rem; }
 
-/* line 58, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 58, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 select:disabled {
   color: rgba(0, 0, 0, 0.3); }
 
-/* line 62, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 62, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .select-wrapper input.select-dropdown:disabled {
   color: rgba(0, 0, 0, 0.3);
   cursor: default;
@@ -14142,68 +14142,68 @@ select:disabled {
   /* IE10+ */
   border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
 
-/* line 71, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 71, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .select-wrapper i {
   color: rgba(0, 0, 0, 0.3); }
 
-/* line 75, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 75, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .select-dropdown li.disabled,
 .select-dropdown li.disabled > span,
 .select-dropdown li.optgroup {
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent; }
 
-/* line 83, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 83, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .prefix ~ .select-wrapper {
   margin-left: 3rem;
   width: 92%;
   width: calc(100% - 3rem); }
 
-/* line 89, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 89, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .prefix ~ label {
   margin-left: 3rem; }
 
-/* line 93, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 93, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .select-dropdown li img {
   height: 40px;
   width: 40px;
   margin: 5px 15px;
   float: right; }
 
-/* line 102, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+/* line 102, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
 .select-dropdown li.optgroup {
   border-top: 1px solid #eee; }
-  /* line 105, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+  /* line 105, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
   .select-dropdown li.optgroup.selected > span {
     color: rgba(0, 0, 0, 0.7); }
-  /* line 109, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+  /* line 109, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
   .select-dropdown li.optgroup > span {
     color: rgba(0, 0, 0, 0.4); }
-  /* line 113, /code/bower_components/Materialize/sass/components/forms/_select.scss */
+  /* line 113, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_select.scss */
   .select-dropdown li.optgroup ~ li.optgroup-option {
     padding-left: 1rem; }
 
 /* File Input
    ========================================================================== */
-/* line 4, /code/bower_components/Materialize/sass/components/forms/_file-input.scss */
+/* line 4, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_file-input.scss */
 .file-field {
   position: relative; }
-  /* line 7, /code/bower_components/Materialize/sass/components/forms/_file-input.scss */
+  /* line 7, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_file-input.scss */
   .file-field .file-path-wrapper {
     overflow: hidden;
     padding-left: 10px; }
-  /* line 12, /code/bower_components/Materialize/sass/components/forms/_file-input.scss */
+  /* line 12, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_file-input.scss */
   .file-field input.file-path {
     width: 100%; }
-  /* line 14, /code/bower_components/Materialize/sass/components/forms/_file-input.scss */
+  /* line 14, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_file-input.scss */
   .file-field .btn, .file-field .btn-large {
     float: left;
     height: 3rem;
     line-height: 3rem; }
-  /* line 20, /code/bower_components/Materialize/sass/components/forms/_file-input.scss */
+  /* line 20, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_file-input.scss */
   .file-field span {
     cursor: pointer; }
-  /* line 24, /code/bower_components/Materialize/sass/components/forms/_file-input.scss */
+  /* line 24, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_file-input.scss */
   .file-field input[type=file] {
     position: absolute;
     top: 0;
@@ -14220,16 +14220,16 @@ select:disabled {
 
 /* Range
    ========================================================================== */
-/* line 4, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 4, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 .range-field {
   position: relative; }
 
-/* line 8, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 8, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range],
 input[type=range] + .thumb {
   cursor: pointer; }
 
-/* line 14, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 14, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range] {
   position: relative;
   background-color: transparent;
@@ -14238,11 +14238,11 @@ input[type=range] {
   width: 100%;
   margin: 15px 0;
   padding: 0; }
-  /* line 23, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+  /* line 23, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
   input[type=range]:focus {
     outline: none; }
 
-/* line 28, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 28, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range] + .thumb {
   position: absolute;
   border: none;
@@ -14254,7 +14254,7 @@ input[type=range] + .thumb {
   margin-left: -6px;
   transform-origin: 50% 50%;
   transform: rotate(-45deg); }
-  /* line 41, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+  /* line 41, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
   input[type=range] + .thumb .value {
     display: block;
     width: 30px;
@@ -14262,27 +14262,27 @@ input[type=range] + .thumb {
     color: #26a69a;
     font-size: 0;
     transform: rotate(45deg); }
-  /* line 50, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+  /* line 50, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
   input[type=range] + .thumb.active {
     border-radius: 50% 50% 50% 0; }
-    /* line 53, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+    /* line 53, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
     input[type=range] + .thumb.active .value {
       color: #fff;
       margin-left: -1px;
       margin-top: 8px;
       font-size: 10px; }
 
-/* line 63, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 63, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range] {
   -webkit-appearance: none; }
 
-/* line 67, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 67, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]::-webkit-slider-runnable-track {
   height: 3px;
   background: #c2c0c2;
   border: none; }
 
-/* line 73, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 73, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
@@ -14294,23 +14294,23 @@ input[type=range]::-webkit-slider-thumb {
   margin: -5px 0 0 0;
   transition: .3s; }
 
-/* line 85, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 85, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #ccc; }
 
-/* line 90, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 90, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range] {
   /* fix for FF unable to apply focus style bug  */
   border: 1px solid white;
   /*required for proper track sizing in FF*/ }
 
-/* line 97, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 97, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]::-moz-range-track {
   height: 3px;
   background: #ddd;
   border: none; }
 
-/* line 103, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 103, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]::-moz-range-thumb {
   border: none;
   height: 14px;
@@ -14319,16 +14319,16 @@ input[type=range]::-moz-range-thumb {
   background: #26a69a;
   margin-top: -5px; }
 
-/* line 113, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 113, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]:-moz-focusring {
   outline: 1px solid #fff;
   outline-offset: -1px; }
 
-/* line 118, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 118, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]:focus::-moz-range-track {
   background: #ccc; }
 
-/* line 123, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 123, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]::-ms-track {
   height: 3px;
   background: transparent;
@@ -14337,15 +14337,15 @@ input[type=range]::-ms-track {
   /*remove default tick marks*/
   color: transparent; }
 
-/* line 137, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 137, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]::-ms-fill-lower {
   background: #777; }
 
-/* line 141, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 141, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]::-ms-fill-upper {
   background: #ddd; }
 
-/* line 145, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 145, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]::-ms-thumb {
   border: none;
   height: 14px;
@@ -14353,11 +14353,11 @@ input[type=range]::-ms-thumb {
   border-radius: 50%;
   background: #26a69a; }
 
-/* line 153, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 153, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]:focus::-ms-fill-lower {
   background: #888; }
 
-/* line 157, /code/bower_components/Materialize/sass/components/forms/_range.scss */
+/* line 157, /Users/sobolev/Documents/elixir/elixir_lang_moscow/bower_components/Materialize/sass/components/forms/_range.scss */
 input[type=range]:focus::-ms-fill-upper {
   background: #ccc; }
 
