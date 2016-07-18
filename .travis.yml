@@ -17,5 +17,12 @@ env: MIX_ENV=test
 script:
   - mix coveralls.travis
 
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  on: master
+  run:
+    - mix ecto.migrate
+
 notifications:
   email: false

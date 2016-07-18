@@ -24,12 +24,14 @@
             <ul class="right hide-on-med-and-down">
               <li><a href="<%= event_path(@conn, :index) %>"><%= gettext "Events" %></a></li>
               <li><a href="<%= speaker_path(@conn, :index) %>"><%= gettext "Speakers" %></a></li>
+              <li><a href="<%= suggested_talk_path(@conn, :new) %>"><%= gettext "Suggest talk" %></a></li>
               <li><a href="/#about"><%= gettext "About" %></a></li>
               <li><a href="#"><%= gettext "Join" %></a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
               <li><a href="<%= event_path(@conn, :index) %>"><%= gettext "Events" %></a></li>
               <li><a href="<%= speaker_path(@conn, :index) %>"><%= gettext "Speakers" %></a></li>
+              <li><a href="<%= suggested_talk_path(@conn, :new) %>"><%= gettext "Suggest talk" %></a></li>
               <li><a href="/#about"><%= gettext "About" %></a></li>
               <li><a href="#"><%= gettext "Join" %></a></li>
             </ul>

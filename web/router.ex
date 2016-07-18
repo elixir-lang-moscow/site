@@ -1,7 +1,9 @@
 defmodule ElixirLangMoscow.Router do
   use ElixirLangMoscow.Web, :router
-
   use ExAdmin.Router
+
+
+  # Pipelines:
 
   pipeline :api do
     plug :accepts, ["json"]
@@ -23,6 +25,9 @@ defmodule ElixirLangMoscow.Router do
       handler: ElixirLangMoscow.AuthController
   end
 
+
+  # Scopes:
+
   scope "/", ElixirLangMoscow do
     pipe_through :browser
 
@@ -32,7 +37,12 @@ defmodule ElixirLangMoscow.Router do
       get "/:event/talks/:slug", EventSpeakerController, :show
     end
 
+    # Browse and list speakers:
     resources "/speakers", SpeakerController, only: [:show, :index]
+
+    # Suggest new talk:
+    resources "/suggest-talk", SuggestedTalkController,
+      only: [:new, :create]
 
     # Index page:
     get "/", PageController, :index

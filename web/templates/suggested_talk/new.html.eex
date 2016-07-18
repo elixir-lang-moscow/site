@@ -1,0 +1,6 @@
+<h2>New suggested talk</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: suggested_talk_path(@conn, :create) %>
+
+<%= link "Back", to: page_path(@conn, :index) %>

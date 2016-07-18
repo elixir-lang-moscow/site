@@ -1,6 +1,7 @@
 defmodule ElixirLangMoscow.Speaker do
   use ElixirLangMoscow.Web, :model
   use Arc.Ecto.Model
+  alias ElixirLangMoscow.SlugGenerator
 
   schema "speakers" do
     field :name, :string
@@ -30,17 +31,16 @@ defmodule ElixirLangMoscow.Speaker do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
-    |> generate_slug
+    |> SlugGenerator.maybe_generate_slug(:title)
     |> unique_constraint(:slug)
     |> cast_attachments(params, @required_file_fields, @optional_file_fields)
   end
 
   def avatar_url(model) do
-    definition = {model.avatar, model}
-    ElixirLangMoscow.Avatar.url(definition)
+    ElixirLangMoscow.Avatar.url({model.avatar, model})
   end
 
-  defp generate_slug(changeset) do
+  defp maybe_generate_slug(changeset) do
     name = get_change(changeset, :name)
     slug = changeset.model.slug
 

@@ -28,7 +28,7 @@ config :phoenix, :generators,
 config :guardian, Guardian,
   issuer: "ElixirLangMoscow",
   ttl: { 30, :days },
-  verify_issuer: true, # optional
+  verify_issuer: true,  # optional
   secret_key: "<guardian development secret key>",
   serializer: ElixirLangMoscow.GuardianSerializer
 
@@ -37,11 +37,6 @@ config :xain, :quote, "'"
 config :xain, :after_callback, {Phoenix.HTML, :raw}
 
 config :ex_admin,
-  theme: ExAdmin.Theme.AdminLte2,
-  theme_selector: [
-    {"AdminLte",  ExAdmin.Theme.AdminLte2},
-    {"ActiveAdmin", ExAdmin.Theme.ActiveAdmin}
-  ],
   repo: ElixirLangMoscow.Repo,
   module: ElixirLangMoscow,
   modules: [
@@ -49,6 +44,7 @@ config :ex_admin,
     ElixirLangMoscow.ExAdmin.EventSpeaker,
     ElixirLangMoscow.ExAdmin.Speaker,
     ElixirLangMoscow.ExAdmin.Registration,
+    ElixirLangMoscow.ExAdmin.SuggestedTalk,
 
     ElixirLangMoscow.ExAdmin.Admin,
   ]
@@ -66,6 +62,10 @@ config :ex_aws,
     host: "s3-eu-west-1.amazonaws.com",
     region: "eu-west-1"
   ]
+
+# Configure Timepad
+config :elixir_lang_moscow, :timepad,
+  key: System.get_env("TIMEPAD_KEY")
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

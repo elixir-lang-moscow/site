@@ -43,7 +43,7 @@ defmodule ElixirLangMoscow.PageController do
       where: r.active == true,
       select: count(r.id)
 
-    Repo.one(query)
+    Repo.one(query)  # `one()` because of `count()`
   end
 
   def index(conn, _params) do

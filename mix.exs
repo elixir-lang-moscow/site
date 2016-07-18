@@ -28,12 +28,13 @@ defmodule ElixirLangMoscow.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {ElixirLangMoscow, []},
-     applications: [
-       :phoenix, :phoenix_html, :cowboy,
-       :logger, :gettext, :phoenix_ecto,
-       :postgrex, :comeonin, :ex_aws,
-       :httpoison,
+    [
+      mod: {ElixirLangMoscow, []},
+      applications: [
+        :phoenix, :phoenix_html, :cowboy,
+        :logger, :gettext, :phoenix_ecto,
+        :postgrex, :comeonin, :ex_aws,
+        :httpoison, :email_checker
      ]
     ]
   end
@@ -71,8 +72,9 @@ defmodule ElixirLangMoscow.Mixfile do
       {:arc, "~> 0.5.2"},
       {:arc_ecto, "~> 0.3.2"},
 
-      # Slugs:
+      # Model helpers:
       {:slugger, "~> 0.1.0"},
+      {:email_checker, "~> 0.0.2"},
 
       # Tests:
       {:exvcr, "~> 0.7", only: :test},

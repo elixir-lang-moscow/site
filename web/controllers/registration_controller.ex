@@ -4,8 +4,6 @@ defmodule ElixirLangMoscow.RegistrationController do
   alias ElixirLangMoscow.Event
   alias ElixirLangMoscow.Registration
 
-  plug :put_layout, "empty.html"
-
   def new(conn, map) do
     json_body =
       map
@@ -16,10 +14,16 @@ defmodule ElixirLangMoscow.RegistrationController do
   end
 
   defp compare_headers(conn, timepad_body) when is_bitstring(timepad_body) do
-    # TODO: replace this key to the real one and hide it:
-    incoming_value = :crypto.hmac(:sha, "test-me", timepad_body) |> Base.encode16
+    timepad_key =
+      Application.get_all_env(:elixir_lang_moscow, :timepad)
+      |> Keyword.get(:key)
 
-    sha_value = conn.req_headers
+    incoming_value =
+      :crypto.hmac(:sha, timepad_key, timepad_body)
+      |> Base.encode16
+
+    sha_value =
+      conn.req_headers
       |> Enum.into(%{})
       |> Map.get("x-hub-signature")
       |> String.replace_prefix("sha1=", "")

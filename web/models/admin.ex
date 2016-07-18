@@ -1,24 +1,3 @@
-defmodule ElixirLangMoscow.PasswordHasher do
-  import Ecto.Changeset, only: [put_change: 3]
-  import Comeonin.Bcrypt, only: [hashpwsalt: 1]
-
-  def hash_password(changeset, param \\ :password_hash, key \\ "password") do
-    if changeset.valid? do
-      put_change(changeset, param, hashpwsalt(changeset.params[key]))
-    else
-      changeset
-    end
-  end
-
-  def check_hash(user, password) do
-    case user do
-      nil -> false
-      _   -> Comeonin.Bcrypt.checkpw(password, user.password_hash)
-    end
-  end
-end
-
-
 defmodule ElixirLangMoscow.Admin do
   use ElixirLangMoscow.Web, :model
 

@@ -4,7 +4,7 @@ config :elixir_lang_moscow, ElixirLangMoscow.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [
     scheme: "https",
-    host: "peaceful-scrubland-19460.herokuapp.com",
+    host: "elixir-lang-moscow.herokuapp.com",
     port: 443
   ],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],

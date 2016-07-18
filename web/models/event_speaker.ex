@@ -1,10 +1,13 @@
 defmodule ElixirLangMoscow.EventSpeaker do
   use ElixirLangMoscow.Web, :model
+  alias ElixirLangMoscow.SlugGenerator
 
   schema "event_speakers" do
     field :title, :string
     field :description, :string
     field :slug, :string
+
+    field :video_link, :string
 
     belongs_to :event, ElixirLangMoscow.Event
     belongs_to :speaker, ElixirLangMoscow.Speaker
@@ -13,7 +16,7 @@ defmodule ElixirLangMoscow.EventSpeaker do
   end
 
   @required_fields ~w(title speaker_id event_id)
-  @optional_fields ~w(slug description)
+  @optional_fields ~w(slug description video_link)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
@@ -24,18 +27,9 @@ defmodule ElixirLangMoscow.EventSpeaker do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
+    |> SlugGenerator.maybe_generate_slug(:title)
+    |> unique_constraint(:slug)
     |> unique_constraint(:title)
-    |> generate_slug
-  end
-
-  defp generate_slug(changeset) do
-    title = get_change(changeset, :title)
-    slug = changeset.model.slug
-
-    if title != nil and slug == nil do # only at initial state
-      put_change(changeset, :slug, Slugger.slugify_downcase(title))
-    else
-      changeset
-    end
+    |> unique_constraint(:video_link)
   end
 end

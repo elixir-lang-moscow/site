@@ -5,47 +5,28 @@ defmodule ElixirLangMoscow.Avatar do
   use Arc.Ecto.Definition
 
   @versions [:original]
-
-  # To add a thumbnail version:
-  # @versions [:original, :thumb]
-  @extension_whitelist ~w(.jpg .jpeg .gif .png)
+  @extension_whitelist ~w(.jpg .jpeg .png)
 
   # Whitelist file extensions:
   def validate({file, _}) do
-    file_extension = file.file_name |> Path.extname |> String.downcase
+    # TODO: validate size
+    file_extension =
+      file.file_name
+      |> Path.extname
+      |> String.downcase
     Enum.member?(@extension_whitelist, file_extension)
   end
 
-  # Define a thumbnail transformation:
-  # def transform(:thumb, _) do
-  #   {:convert, "-strip -thumbnail 250x250^ -gravity center -extent 250x250 -format png", :png}
-  # end
-
-  # Override the persisted filenames:
-  # def filename(version, _) do
-  #   version
-  # end
-
-  # def __storage, do: Arc.Storage.Local
-
-  # Override the storage directory:
-  # def storage_dir(_version, {_file, scope}) do
-  #   @base_storage_dir <> "/#{scope.slug}" # TODO: add slug
-  # end
-  # def storage_dir(_, {_, nil}) do
-  #   @base_storage_dir
-  # end
-
-  def storage_dir(version, {file, scope}) do
-    "uploads/avatars/#{scope.slug}"
+  def storage_dir(_version, {_file, scope}) do
+    "#{Mix.env}/uploads/avatars/#{scope.slug}"
   end
 
   # Provide a default URL if there hasn't been a file uploaded
-  def default_url(version, scope) do
+  def default_url(_version, _scope) do
     "http://placehold.it/200x200"
   end
 
-  def s3_object_headers(version, {file, scope}) do
+  def s3_object_headers(_version, {file, _scope}) do
     # For "image.png", would produce: "image/png"
     [content_type: Plug.MIME.path(file.file_name)]
   end

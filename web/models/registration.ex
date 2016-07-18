@@ -11,7 +11,7 @@ defmodule ElixirLangMoscow.Registration do
     field :code, :string
     field :barcode, :string
     field :active, :boolean, default: true
-    
+
     belongs_to :event, ElixirLangMoscow.Event
 
     timestamps
