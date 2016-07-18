@@ -1,6 +1,6 @@
 # ElixirLangMoscow
 
-[![Build Status](https://travis-ci.org/elixir-lang-moscow/site.svg?branch=master)](https://travis-ci.org/elixir-lang-moscow/site) [![Docker pulls](https://img.shields.io/docker/pulls/elixir_lang_moscow/site.svg)](https://hub.docker.com/r/sobolevn/site/~/dockerfile/)
+[![Build Status](https://travis-ci.org/elixir-lang-moscow/site.svg?branch=master)](https://travis-ci.org/elixir-lang-moscow/site) [![Coverage Status](https://coveralls.io/repos/github/elixir-lang-moscow/site/badge.svg?branch=master)](https://coveralls.io/github/elixir-lang-moscow/site?branch=master) [![Docker pulls](https://img.shields.io/docker/pulls/sobolevn/elixir_lang_moscow.svg)](https://hub.docker.com/r/sobolevn/elixir_lang_moscow/~/dockerfile/)
 
 ## Requirements
 
@@ -10,21 +10,16 @@ You will need:
   * elixir
   * node
   * postgres
-  * docker (optional)
 
-## Installation
+Or:
 
-To start your Phoenix app:
-
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `npm install`
-  * Start Phoenix endpoint with `mix phoenix.server`
+  * docker
 
 ## Docker
 
 To run app in `docker` container:
 
+  0. Clone the repo
   1. Run `docker-compose build`
   2. Run `docker-compose run web mix test` to test the installation
   3. Run `docker-compose run web mix ecto.setup`
@@ -52,12 +47,12 @@ Add these lines to `/ets/hosts`:
 
 And now, run:
 
+  0. Clone the repo
   1. Run `mix deps.get && mix compile`
   2. Run `mix test` to ensure that everything is fine
   3. Run `mix ecto.setup`
-  4. Run `mix phoenix.server`
-
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+  4. Install Node.js dependencies with `npm install`
+  5. Start Phoenix endpoint with `mix phoenix.server`. Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Creating admin account
 
