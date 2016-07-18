@@ -4,7 +4,7 @@ defmodule ElixirLangMoscow.SuggestedTalkControllerTest do
   alias ElixirLangMoscow.SuggestedTalk
 
   @valid_attrs %{
-    email: "some content",
+    email: "some@content.com",
     message: "some content",
     name: "some content",
     seen: true,

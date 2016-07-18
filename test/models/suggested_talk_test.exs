@@ -3,7 +3,13 @@ defmodule ElixirLangMoscow.SuggestedTalkTest do
 
   alias ElixirLangMoscow.SuggestedTalk
 
-  @valid_attrs %{email: "some content", message: "some content", name: "some content", seen: true, topic: "some content"}
+  @valid_attrs %{
+    email: "some@content.com", 
+    message: "some content",
+    name: "some content",
+    seen: true,
+    topic: "some content",
+  }
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
