@@ -15,4 +15,11 @@ defmodule ElixirLangMoscow.SpeakerTest do
     changeset = Speaker.changeset(%Speaker{}, @invalid_attrs)
     refute changeset.valid?
   end
+
+  test "slug generation" do
+    changeset = Speaker.changeset(%Speaker{}, @valid_attrs)
+    speaker = Repo.insert!(changeset)
+
+    assert speaker.slug == "some-content"
+  end
 end

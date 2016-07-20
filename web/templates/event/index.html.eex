@@ -1,0 +1,11 @@
+<ul>
+
+  <%= for event <- @events do %>
+    <li>
+      <a href="<%= event_path(@conn, :show, event) %>">
+        <%= event.name %>
+      </a>, <%= event.location %> : <%= event.time_at %>
+    </li>
+  <% end %>
+
+</ul>

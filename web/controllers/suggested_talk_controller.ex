@@ -14,7 +14,7 @@ defmodule ElixirLangMoscow.SuggestedTalkController do
     changeset = SuggestedTalk.changeset(%SuggestedTalk{}, suggested_talk_params)
 
     case Repo.insert(changeset) do
-      {:ok, suggested_talk} ->
+      {:ok, _suggested_talk} ->
         conn
         |> put_flash(:info, "Suggested talk created successfully.")
         |> redirect(to: suggested_talk_path(conn, :new))

@@ -34,7 +34,7 @@ defmodule ElixirLangMoscow.Mixfile do
         :phoenix, :phoenix_html, :cowboy,
         :logger, :gettext, :phoenix_ecto,
         :postgrex, :comeonin, :ex_aws,
-        :httpoison, :email_checker
+        :httpoison,
      ]
     ]
   end
@@ -57,6 +57,10 @@ defmodule ElixirLangMoscow.Mixfile do
       {:gettext, "~> 0.9"},
       {:cowboy, "~> 1.0"},
 
+      # Model helpers:
+      {:slugger, path: "deps/slugger", override: true},
+      {:ecto_autoslug_field, path: "deps/ecto_autoslug_field"},
+
       # Auth:
       {:guardian, "~> 0.10.0"},
       {:comeonin, "~> 2.4"},
@@ -72,12 +76,7 @@ defmodule ElixirLangMoscow.Mixfile do
       {:arc, "~> 0.5.2"},
       {:arc_ecto, "~> 0.3.2"},
 
-      # Model helpers:
-      {:slugger, "~> 0.1.0"},
-      {:email_checker, "~> 0.0.2"},
-
       # Tests:
-      {:exvcr, "~> 0.7", only: :test},
       {:excoveralls, "~> 0.5", only: :test},
 
       # Lint:

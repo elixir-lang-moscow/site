@@ -19,10 +19,12 @@ script:
 
 deploy:
   provider: heroku
+  app: elixir-lang-moscow
   api_key: $HEROKU_API_KEY
   on: master
   run:
     - mix ecto.migrate
+    - mix admin.install --no-config --no-route --no-dashboard
 
 notifications:
   email: false
