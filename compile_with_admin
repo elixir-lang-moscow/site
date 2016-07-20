@@ -1,0 +1,4 @@
+mix admin.install --no-config --no-route --no-dashboard
+
+brunch build --production
+mix phoenix.digest
