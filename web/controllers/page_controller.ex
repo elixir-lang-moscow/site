@@ -8,7 +8,7 @@ defmodule ElixirLangMoscow.PageController do
   defp closest_event do
     query =
       from e in Event,
-      order_by: e.time_at,
+      order_by: [desc: e.time_at],
       limit: 1,
       preload: [:speakers]
 

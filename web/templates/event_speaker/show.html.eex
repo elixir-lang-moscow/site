@@ -22,4 +22,10 @@
     </a>
   </li>
 
+  <%= if has_video?(@event_speaker) do %>
+    <iframe width="560" height="315"
+      src="<%= @event_speaker.video_link %>"
+      frameborder="0" allowfullscreen></iframe>
+  <% end %>
+
 </ul>
