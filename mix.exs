@@ -58,8 +58,7 @@ defmodule ElixirLangMoscow.Mixfile do
       {:cowboy, "~> 1.0"},
 
       # Model helpers:
-      {:slugger, path: "deps/slugger", override: true},
-      {:ecto_autoslug_field, path: "deps/ecto_autoslug_field"},
+      {:slugger, "~> 0.1.0"},
 
       # Auth:
       {:guardian, "~> 0.10.0"},
