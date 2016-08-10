@@ -36,4 +36,6 @@ defmodule ElixirLangMoscow.Registration do
     |> unique_constraint(:code)
     |> unique_constraint(:barcode)
   end
+
+  def full_name(reg), do: "#{reg.first_name} #{reg.last_name}"
 end

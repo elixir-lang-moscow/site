@@ -15,6 +15,14 @@ Or:
 
   * docker
 
+### External services
+
+We do use a bunch of integrations, so if you want to replicate the whole project you will need:
+
+  - Amazon AWS: set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
+  - Mailgun: set ``
+  - Timepad: set `TIMEPAD_KEY`
+
 ## Docker
 
 To run app in `docker` container:

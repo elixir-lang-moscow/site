@@ -10,6 +10,8 @@ defmodule ElixirLangMoscow.SuggestedTalk do
     field :message, :string
     field :seen, :boolean, default: false
 
+    # TODO: add recaptcha when v2 will be ready
+
     timestamps
   end
 

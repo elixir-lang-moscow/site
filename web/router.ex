@@ -71,4 +71,12 @@ defmodule ElixirLangMoscow.Router do
     admin_routes
   end
 
+  if Mix.env == :dev do
+    # Preview emails on development, but not send them:
+    scope "/dev" do
+      pipe_through [:browser]
+      forward "/mailbox", Plug.Swoosh.MailboxPreview, [base_path: "/dev/mailbox"]
+    end
+  end
+
 end

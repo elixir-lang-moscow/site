@@ -1,0 +1,16 @@
+<div>
+  <h1>We have a new talk contributed</h1>
+
+  <h2><%= @talk.name %> have suggested "<%= @talk.topic %>"</h2>
+
+  <p>
+    <%= @talk.message %>
+  </p>
+
+  <p>
+    Contact the author: <%= @talk.email %>
+  </p>
+  <p>
+    See it online: <a href="https://elixir-lang.moscow/admin"></a>
+  </p>
+</div>

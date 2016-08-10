@@ -1,0 +1,10 @@
+{
+  "skip_files": [
+    "lib/mix",
+    "web/admin",
+    "test/support",
+
+    "lib/elixir_lang_moscow.ex",
+    "web/uploaders/avatar.ex"
+  ]
+}

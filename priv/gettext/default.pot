@@ -1,0 +1,56 @@
+## This file is a PO Template file.
+##
+## `msgid`s here are often extracted from source code.
+## Add new translations manually only if they're dynamic
+## translations that can't be statically extracted.
+##
+## Run `mix gettext.extract` to bring this file up to
+## date. Leave `msgstr`s empty as changing them here as no
+## effect: edit them in PO (`.po`) files instead.
+msgid ""
+msgstr ""
+"Language: INSERT LANGUAGE HERE\n"
+
+#: web/templates/layout/app.html.eex:28 web/templates/layout/app.html.eex:35
+msgid "About"
+msgstr ""
+
+#: web/templates/page/index.html.eex:14
+msgid "Active registartions for now:"
+msgstr ""
+
+#: web/views/page_view.ex:6
+msgid "Annonymous speaker"
+msgstr ""
+
+#: web/templates/layout/app.html.eex:25 web/templates/layout/app.html.eex:32
+msgid "Events"
+msgstr ""
+
+#: web/templates/layout/app.html.eex:29 web/templates/layout/app.html.eex:36
+msgid "Join"
+msgstr ""
+
+#: web/templates/page/index.html.eex:42
+msgid "Recent events"
+msgstr ""
+
+#: web/templates/page/index.html.eex:62
+msgid "Recent talks"
+msgstr ""
+
+#: web/templates/page/index.html.eex:31
+msgid "Register"
+msgstr ""
+
+#: web/templates/layout/app.html.eex:26 web/templates/layout/app.html.eex:33
+msgid "Speakers"
+msgstr ""
+
+#: web/templates/layout/app.html.eex:27 web/templates/layout/app.html.eex:34
+msgid "Suggest talk"
+msgstr ""
+
+#: web/templates/page/index.html.eex:2
+msgid "Welcome to Elixir community in Moscow!"
+msgstr ""

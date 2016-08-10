@@ -4,19 +4,21 @@ defmodule ElixirLangMoscow.BaseTest do
   alias ElixirLangMoscow.Speaker
   alias ElixirLangMoscow.Event
   alias ElixirLangMoscow.Registration
+  alias ElixirLangMoscow.SuggestedTalk
 
 
-  def valid_event do
+  def valid_event() do
     %{
       name: "some content",
       location: "some content",
       time_at: "2010-04-17 14:00:00",
-      uid: "some-valid-value",
+      uid: "1",
       registration_link: "http://somelink.com",
+      max_registrations: 20,
     }
   end
-  def valid_speaker, do: %{name: "some content"}
-  def valid_registration do
+  def valid_speaker(), do: %{name: "some content"}
+  def valid_registration() do
     %{
       company: "SomeCompany",
       first_name: "SomeName",
@@ -26,6 +28,14 @@ defmodule ElixirLangMoscow.BaseTest do
       code: "some-unique-code",
       barcode: "some-unique-barcode",
       # event_id is set on demand, later on
+    }
+  end
+  def valid_suggested_talk() do
+    %{
+      email: "some@content.com",
+      message: "some content",
+      name: "some content",
+      topic: "some content",
     }
   end
 
@@ -43,6 +53,10 @@ defmodule ElixirLangMoscow.BaseTest do
   def create_registration(event) do
     data = Map.put(valid_registration(), :event_id, event.id)
     Registration.changeset(%Registration{}, data) |> Repo.insert!
+  end
+  def create_suggested_talk() do
+    SuggestedTalk.changeset(%SuggestedTalk{}, valid_suggested_talk())
+    |> Repo.insert!
   end
 
 end

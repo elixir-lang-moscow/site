@@ -6,6 +6,6 @@ defmodule ElixirLangMoscow.AuthView do
   end
 
   def current_user(conn) do
-  	ElixirLangMoscow.Auathentication.current_user conn
+  	ElixirLangMoscow.Authentication.current_user conn
   end
 end

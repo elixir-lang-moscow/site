@@ -9,6 +9,7 @@ defmodule ElixirLangMoscow.Repo.Migrations.CreateEvent do
 
       add :uid, :string
       add :registration_link, :string
+      add :max_registrations, :integer
 
       timestamps
     end

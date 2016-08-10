@@ -4,10 +4,6 @@ defmodule ElixirLangMoscow.EventSpeakerView do
   import ElixirLangMoscow.Speaker, only: [avatar_url: 1]
   alias ElixirLangMoscow.EventSpeaker
 
-  def avatar(speaker) do
-    avatar_url(speaker)
-  end
-
   def has_video?(%EventSpeaker{video_link: ""}) do
     false
   end

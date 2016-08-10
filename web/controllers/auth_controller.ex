@@ -8,13 +8,13 @@ defmodule ElixirLangMoscow.AuthController do
     redirect(conn, to: auth_path(conn, :new))
   end
 
-  def new(conn, params) do
+  def new(conn, _params) do
     render(conn, "login.html")
   end
 
   def create(conn, %{"login" => login}) do
     %{"username" => username, "password" => password} = login
-    user = Repo.get_by(Admin, username: username)
+    user = Repo.get_by(Admin, [username: username, active: true])
 
     case authenticate(user, password) do
       {:ok, user} ->
@@ -36,6 +36,7 @@ defmodule ElixirLangMoscow.AuthController do
   end
 
   defp authenticate(user, password) do
+    # user can still be `nil`:
     case PasswordHasher.check_hash(user, password) do
       true -> {:ok, user}
       _ -> :error

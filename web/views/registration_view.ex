@@ -2,7 +2,6 @@ defmodule ElixirLangMoscow.RegistrationView do
   use ElixirLangMoscow.Web, :view
 
   def render("registration.json", %{conn: conn}) do
-    IO.inspect conn
     %{"result" => conn.assigns.registration_result}
   end
 

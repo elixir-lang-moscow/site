@@ -37,6 +37,7 @@ config :xain, :quote, "'"
 config :xain, :after_callback, {Phoenix.HTML, :raw}
 
 config :ex_admin,
+  theme: ExAdmin.Theme.ActiveAdmin,
   repo: ElixirLangMoscow.Repo,
   module: ElixirLangMoscow,
   modules: [
@@ -45,7 +46,6 @@ config :ex_admin,
     ElixirLangMoscow.ExAdmin.Speaker,
     ElixirLangMoscow.ExAdmin.Registration,
     ElixirLangMoscow.ExAdmin.SuggestedTalk,
-
     ElixirLangMoscow.ExAdmin.Admin,
   ]
 
@@ -66,6 +66,10 @@ config :ex_aws,
 # Configure Timepad
 config :elixir_lang_moscow, :timepad,
   key: System.get_env("TIMEPAD_KEY")
+
+# Configure emails
+config :elixir_lang_moscow, ElixirLangMoscow.Mailer,
+  adapter: Swoosh.Adapters.Local
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

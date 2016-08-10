@@ -34,7 +34,8 @@ defmodule ElixirLangMoscow.Mixfile do
         :phoenix, :phoenix_html, :cowboy,
         :logger, :gettext, :phoenix_ecto,
         :postgrex, :comeonin, :ex_aws,
-        :httpoison,
+        :httpoison, :swoosh, :phoenix_swoosh,
+        :exconstructor
      ]
     ]
   end
@@ -58,22 +59,25 @@ defmodule ElixirLangMoscow.Mixfile do
       {:cowboy, "~> 1.0"},
 
       # Model helpers:
-      {:slugger, "~> 0.1.0"},
+      {:ecto_autoslug_field, "~> 0.1"},
+      {:exconstructor, "~> 1.0.2"},
 
       # Auth:
       {:guardian, "~> 0.10.0"},
       {:comeonin, "~> 2.4"},
 
       # Administration:
-      {:ex_admin, "~> 0.7"},
+      {:ex_admin, "~> 0.7.2"},
 
       # Amazon image hosting:
       {:ex_aws, "~> 0.4.10"},
       {:httpoison, "~> 0.7"},
-
-      # Images uploads:
       {:arc, "~> 0.5.2"},
       {:arc_ecto, "~> 0.3.2"},
+
+      # Emails:
+      {:swoosh, "~> 0.4"},
+      {:phoenix_swoosh, "~> 0.1"},
 
       # Tests:
       {:excoveralls, "~> 0.5", only: :test},
@@ -90,7 +94,16 @@ defmodule ElixirLangMoscow.Mixfile do
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
-    ["ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-     "ecto.reset": ["ecto.drop", "ecto.setup"]]
+    [
+      "ecto.setup": [
+        "ecto.create",
+        "ecto.migrate",
+        "run priv/repo/seeds.exs",
+      ],
+      "ecto.reset": [
+        "ecto.drop",
+        "ecto.setup",
+      ]
+    ]
   end
 end

@@ -25,6 +25,12 @@ config :logger, level: :info
 config :guardian, Guardian,
   secret_key: System.get_env("GUARDIAN_SECRET_KEY")
 
+# Configure emails
+config :elixir_lang_moscow, ElixirLangMoscow.Mailer,
+  adapter: Swoosh.Adapters.Mailgun,
+  api_key: System.get_env("MAILGUN_API_KEY"),
+  domain: "elixir-lang.moscow"
+
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 # import_config "prod.secret.exs"

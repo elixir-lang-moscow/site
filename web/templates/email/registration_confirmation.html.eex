@@ -1,0 +1,8 @@
+<h1>Your registration is completed</h1>
+
+<p>
+  Thanks, <%= full_name(@registration) %>!
+  See you on <%= @registration.event.time_at %>.
+
+  Please, have your ID with you.
+</p>

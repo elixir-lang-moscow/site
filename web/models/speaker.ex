@@ -1,18 +1,18 @@
-# defmodule ElixirLangMoscow.Speaker.Slug do
-#   use EctoAutoslugField.Slug, from: :name, to: :slug
-#
-#   def build_slug(sources), do: super(sources)
-# end
+defmodule ElixirLangMoscow.SpeakerSlug do
+  use EctoAutoslugField.Slug, from: [:name, :company], to: :slug
+end
 
 defmodule ElixirLangMoscow.Speaker do
   use ElixirLangMoscow.Web, :model
   use Arc.Ecto.Model
 
+  alias ElixirLangMoscow.SpeakerSlug
+
   schema "speakers" do
     field :name, :string
     field :company, :string
 
-    field :slug, :string  # ElixirLangMoscow.Speaker.Slug.Type
+    field :slug, SpeakerSlug.Type
     field :avatar, ElixirLangMoscow.Avatar.Type
 
     has_many :event_speakers, ElixirLangMoscow.EventSpeaker
@@ -36,12 +36,13 @@ defmodule ElixirLangMoscow.Speaker do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
-    |> ElixirLangMoscow.SlugGenerator.maybe_generate_slug(:name)
-    |> unique_constraint(:slug)
+    |> SpeakerSlug.maybe_generate_slug
+    |> SpeakerSlug.unique_constraint
     |> cast_attachments(params, @required_file_fields, @optional_file_fields)
   end
 
   def avatar_url(model) do
+    # TODO: test how `signed: true` works:
     ElixirLangMoscow.Avatar.url({model.avatar, model})
   end
 end

@@ -10,7 +10,7 @@
   <li>
     <strong>Speaker:</strong>
     <div>
-      <img src="<%= avatar(@speaker) %>" />
+      <img src="<%= avatar_url(@speaker) %>" />
     </div>
     <%= @speaker.name %>
     <%= @speaker.company %>

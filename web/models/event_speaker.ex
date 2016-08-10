@@ -1,11 +1,16 @@
+defmodule ElixirLangMoscow.EventSpeakerSlug do
+  use EctoAutoslugField.Slug, from: :title, to: :slug
+end
+
 defmodule ElixirLangMoscow.EventSpeaker do
   use ElixirLangMoscow.Web, :model
-  alias ElixirLangMoscow.SlugGenerator
+
+  alias ElixirLangMoscow.EventSpeakerSlug
 
   schema "event_speakers" do
     field :title, :string
     field :description, :string
-    field :slug, :string
+    field :slug, EventSpeakerSlug.Type
 
     field :video_link, :string
 
@@ -27,9 +32,9 @@ defmodule ElixirLangMoscow.EventSpeaker do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
-    |> SlugGenerator.maybe_generate_slug(:title)
-    |> unique_constraint(:slug)
     |> unique_constraint(:title)
     |> unique_constraint(:video_link)
+    |> EventSpeakerSlug.maybe_generate_slug
+    |> EventSpeakerSlug.unique_constraint
   end
 end

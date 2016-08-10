@@ -16,7 +16,10 @@ npm-debug.log.*
 # Since we are building assets from web/static,
 # we ignore priv/static. You may want to comment
 # this depending on your deployment strategy.
-/priv/static/
+# /priv/static/
+
+# TODO: uncomment the previous line, when this issue will be closed:
+# https://github.com/smpallen99/ex_admin/issues/178
 
 
 # The config/prod.secret.exs file by default contains sensitive

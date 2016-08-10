@@ -1,5 +1,6 @@
-<ul>
+<h1>Speakers</h1>
 
+<ul>
   <%= for speaker <- @speakers do %>
   <li>
     <strong>Speaker:</strong>
@@ -9,7 +10,7 @@
       </a>
     </strong>
     <div>
-      <img src="<%= avatar(speaker) %>" />
+      <img src="<%= avatar_url(speaker) %>" />
     </div>
     <%= speaker.company %>
   </li>

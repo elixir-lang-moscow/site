@@ -17,3 +17,7 @@ config :elixir_lang_moscow, ElixirLangMoscow.Repo,
   database: "elixir_lang_moscow_test",
   hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# Configure Timepad
+config :elixir_lang_moscow, :timepad,
+  key: "test-me"

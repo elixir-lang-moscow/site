@@ -1,53 +1,101 @@
+defmodule ElixirLangMoscow.RegistrationController.Timepad do
+  defstruct [:id, :code, :barcode, :status_raw, :event_id, :answers]
+
+  use ExConstructor
+end
+
+
 defmodule ElixirLangMoscow.RegistrationController do
   use ElixirLangMoscow.Web, :controller
 
-  alias ElixirLangMoscow.Event
-  alias ElixirLangMoscow.Registration
+  alias Ecto.Changeset
+  alias ElixirLangMoscow.{Event, Registration}
+  alias ElixirLangMoscow.Emails
+  alias ElixirLangMoscow.RegistrationController.Timepad
 
-  def new(conn, map) do
+  def new(conn, json_body) do
     json_body =
-      map
+      json_body
       |> Map.keys
       |> List.first
 
-    compare_headers conn, json_body
+    with {:ok, timepad_json} <- validate_request(conn, json_body),
+         {:ok, _registration} <- handle_registration(timepad_json) do
+      return_response(conn, :ok)
+    else
+      {:error, status} -> return_response(conn, :error, status)
+    end
   end
 
-  defp compare_headers(conn, timepad_body) when is_bitstring(timepad_body) do
+  defp validate_request(conn, timepad_body) when is_binary(timepad_body) do
     timepad_key =
-      Application.get_all_env(:elixir_lang_moscow, :timepad)
+      Application.get_env(:elixir_lang_moscow, :timepad)
       |> Keyword.get(:key)
 
     incoming_value =
       :crypto.hmac(:sha, timepad_key, timepad_body)
       |> Base.encode16
+      |> String.downcase
 
     sha_value =
       conn.req_headers
       |> Enum.into(%{})
-      |> Map.get("x-hub-signature")
+      |> Map.get("x-hub-signature", "")
       |> String.replace_prefix("sha1=", "")
-      |> String.upcase
+      |> String.downcase
 
     if incoming_value == sha_value do
-      complete conn, Poison.Parser.parse!(timepad_body)
+      {:ok, Timepad.new(Poison.Parser.parse!(timepad_body))}
     else
-      handle_error conn, :unauthorized
+      {:error, :unauthorized}
     end
   end
-
-  defp compare_headers(conn, _) do
-    handle_error conn, :internal_server_error
+  defp validate_request(_, _) do
+    {:error, :internal_server_error}
   end
 
-  defp handle_registration(conn, %{"status_raw" => "ok"} = timepad_json, event) do
-    [
-      %{"id" => 1357809, "value" => email},
-      %{"id" => 1357810, "value" => last_name},
-      %{"id" => 1357811, "value" => first_name},
-      %{"id" => 1357819, "value" => company}
-    ] = timepad_json["answers"]
+  defp handle_registration(%Timepad{status_raw: "ok"} = timepad) do
+    case Repo.get_by(Event, uid: to_string(timepad.event_id)) do
+      nil -> {:error, :not_found}
+      event -> create_new(event, timepad)
+    end
+  end
+  defp handle_registration(%Timepad{status_raw: "deleted"} = timepad) do
+    cancel timepad.id
+  end
+  defp handle_registration(%Timepad{status_raw: "inactive"} = timepad) do
+    cancel timepad.id
+  end
+  defp handle_registration(%Timepad{status_raw: "rejected"} = timepad) do
+    cancel timepad.id
+  end
+  defp handle_registration(_params) do
+    {:error, :not_found}
+  end
 
+  defp cancel(uid) do
+    {:ok, tuple} = Repo.transaction(fn ->
+      case Repo.get_by(Registration, uid: to_string(uid)) do
+        nil -> {:error, :not_found}
+        registration ->
+          registration = Changeset.change(registration, active: false)
+          Repo.update!(registration)
+          # TODO: send email about canceled registration
+
+          {:ok, registration}
+      end
+    end)
+
+    tuple
+  end
+
+  defp create_new(event, %Timepad{} = timepad) do
+    [
+      %{"name" => "E-mail", "value" => email},
+      %{"name" => "Фамилия", "value" => last_name},
+      %{"name" => "Имя", "value" => first_name},
+      %{"name" => "Компания", "value" => company}
+    ] = timepad.answers
 
     registration_params = %{
       "email" => email,
@@ -55,66 +103,35 @@ defmodule ElixirLangMoscow.RegistrationController do
       "last_name" => last_name,
       "company" => company,
 
-      "uid" => timepad_json["id"],
-      "barcode" => timepad_json["barcode"],
-      "code" => timepad_json["code"],
+      "uid" => timepad.id,
+      "barcode" => timepad.barcode,
+      "code" => timepad.code,
 
       "event_id" => event.id,
     }
     changeset = Registration.changeset(%Registration{}, registration_params)
 
     case Repo.insert(changeset) do
-      {:ok, _event} ->
-        conn
-        |> assign(:registration_result, "Success")
-        |> put_status(:ok)
-        |> render("registration.json")
-      {:error, _changeset} ->
-        handle_error conn, :internal_server_error
+      {:ok, registration} ->
+        # Create email that everything is fine:
+        Emails.create_and_send(
+          registration, :registration_confirmation, :async)
+
+        {:ok, registration}
+      {:error, _changeset} -> {:error, :conflict}
     end
   end
-  defp handle_registration(conn, %{"status_raw" => "deleted", "id" => uid}, _) do
-    cancel conn, uid
-  end
-  defp handle_registration(conn, %{"status_raw" => "inactive", "id" => uid}, _) do
-    cancel conn, uid
-  end
-  defp handle_registration(conn, %{"status_raw" => "rejected", "id" => uid}, _) do
-    cancel conn, uid
-  end
-  defp handle_registration(conn, _params, _) do
-    handle_error conn, :not_found
-  end
 
-
-  defp handle_error(conn, status) do
+  defp return_response(conn, :error, status) do
     conn
     |> put_status(status)
     |> assign(:registration_result, "Error")
     |> render("registration.json")
   end
-
-  defp handle_cancel(conn, registration) do
-    registration = Ecto.Changeset.change registration, active: false
-    Repo.update! registration
-
+  defp return_response(conn, :ok) do
     conn
     |> put_status(:ok)
-    |> assign(:registration_result, "Canceled")
+    |> assign(:registration_result, "Success")
     |> render("registration.json")
-  end
-
-  defp cancel(conn, uid) do
-    case Repo.get_by(Registration, uid: to_string(uid)) do
-      nil -> handle_error conn, :not_found
-      registration -> handle_cancel conn, registration
-    end
-  end
-
-  defp complete(conn, %{"event_id" => event_id} = timepad_json) do
-    case Repo.get_by(Event, uid: to_string(event_id)) do
-      nil -> handle_error conn, :not_found
-      event -> handle_registration(conn, timepad_json, event)
-    end
   end
 end

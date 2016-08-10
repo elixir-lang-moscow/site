@@ -12,6 +12,15 @@ defmodule ElixirLangMoscow.ExAdmin.Speaker do
       %{all: []}
     end
 
+    form admin do  # TODO: remove when the bug with ex_admin wiil be fixed
+      inputs do
+        input admin, :name
+        input admin, :company
+        input admin, :slug, type: :text
+        input admin, :avatar, type: :file
+      end
+    end
+
     show speaker do
       attributes_table do
         row :name

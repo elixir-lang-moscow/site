@@ -6,8 +6,9 @@ defmodule ElixirLangMoscow.Event do
     field :location, :string
     field :time_at, Ecto.DateTime
 
-    field :uid, :string # unique id from the TimePad
+    field :uid, :string  # unique id from the TimePad
     field :registration_link, :string
+    field :max_registrations, :integer
 
     has_many :registrations, ElixirLangMoscow.Registration
 
@@ -17,7 +18,9 @@ defmodule ElixirLangMoscow.Event do
     timestamps
   end
 
-  @required_fields ~w(name location time_at uid registration_link)
+  @required_fields ~w(
+    name location time_at uid registration_link max_registrations
+  )
   @optional_fields ~w()
 
   @doc """

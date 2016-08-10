@@ -1,7 +1,8 @@
 defmodule ElixirLangMoscow.ExAdmin.Event do
   use ExAdmin.Register
+  alias ElixirLangMoscow.{Event, Registration}
 
-  register_resource ElixirLangMoscow.Event do
+  register_resource Event do
     menu priority: 1
 
     scope :all, default: true
@@ -33,6 +34,9 @@ defmodule ElixirLangMoscow.ExAdmin.Event do
       end
 
       attributes_table_for event do
+        row "Max registrations", fn(event) ->
+          text event.max_registrations
+        end
         row "Registrations done", fn(event) ->
           text length(event.registrations)
         end
@@ -40,7 +44,7 @@ defmodule ElixirLangMoscow.ExAdmin.Event do
 
       panel "Registrations" do
         table_for event.registrations do
-          column "Fullname", fn(item) -> text full_name(item) end
+          column "Fullname", fn(item) -> text Registration.full_name(item) end
           column "Email", fn(item) -> text item.email end
           column "Company", fn(item) -> text item.company end
         end
@@ -48,6 +52,4 @@ defmodule ElixirLangMoscow.ExAdmin.Event do
     end
 
   end
-
-  def full_name(item), do: item.first_name <> " " <> item.last_name
 end
