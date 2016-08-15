@@ -2,12 +2,7 @@ defmodule ElixirLangMoscow.EventControllerTest do
   use ElixirLangMoscow.ConnCase
 
   alias ElixirLangMoscow.Event
-  @valid_attrs %{
-    location: "some content",
-    name: "some content",
-    time_at: "2010-04-17 14:00:00",
-    uid: "some-unique-value",
-  }
+  alias ElixirLangMoscow.BaseTest
   @invalid_attrs %{}
 
   test "lists all entries on index", %{conn: conn} do
@@ -16,7 +11,7 @@ defmodule ElixirLangMoscow.EventControllerTest do
   end
 
   test "shows chosen resource", %{conn: conn} do
-    event = Repo.insert! %Event{}
+    event = Repo.insert!(Event.changeset(%Event{}, BaseTest.valid_event()))
     conn = get conn, event_path(conn, :show, event)
     assert conn.status == 200
   end

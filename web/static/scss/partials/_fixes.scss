@@ -1,0 +1,44 @@
+// This module contains all the styles that are
+// required to reset base css or `hack` css.
+
+main {
+  margin: 1em 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+// hack.css
+
+.hack {
+  hr {
+    // Can be deleted after version >0.7.2 is released
+    font-size: initial;
+    line-height: initial;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  .avatarholder {
+    width: 75px;
+    height: 75px;
+    line-height: 46px;
+    font-size: 2rem;
+    background-size: initial;
+    background-position: 0;
+    background-repeat: initial;
+    background-color: initial;
+  }
+
+  .media {
+    .media-body {
+      min-width: 250px;
+    }
+  }
+}

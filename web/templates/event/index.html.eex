@@ -1,11 +1,15 @@
-<ul>
+<h1><%= gettext "Events" %></h1>
 
+<div class="events__component">
+
+  <div class="grid -middle">
   <%= for event <- @events do %>
-    <li>
-      <a href="<%= event_path(@conn, :show, event) %>">
-        <%= event.name %>
-      </a>, <%= event.location %> : <%= event.time_at %>
-    </li>
-  <% end %>
 
-</ul>
+      <div class="cell -6of12">
+        <%= render "card.html", event: event, conn: @conn %>
+      </div>
+
+  <% end %>
+  </div>
+
+</div>

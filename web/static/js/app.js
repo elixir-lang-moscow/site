@@ -18,9 +18,3 @@
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-
-(function(document, window, $) {
-  $(document).ready(function() {
-    $(".button-collapse").sideNav();
-  });
-})(document, window, $);

@@ -13,37 +13,25 @@
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
-  <body>
-    <header>
-        <nav class="deep-purple lighten-1">
-          <div class="nav-wrapper">
-            <a href="/" class="brand-logo">Logo</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse">
-              <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="<%= event_path(@conn, :index) %>"><%= gettext "Events" %></a></li>
-              <li><a href="<%= speaker_path(@conn, :index) %>"><%= gettext "Speakers" %></a></li>
-              <li><a href="<%= suggested_talk_path(@conn, :new) %>"><%= gettext "Suggest talk" %></a></li>
-              <li><a href="/#about"><%= gettext "About" %></a></li>
-              <li><a href="#"><%= gettext "Join" %></a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-              <li><a href="<%= event_path(@conn, :index) %>"><%= gettext "Events" %></a></li>
-              <li><a href="<%= speaker_path(@conn, :index) %>"><%= gettext "Speakers" %></a></li>
-              <li><a href="<%= suggested_talk_path(@conn, :new) %>"><%= gettext "Suggest talk" %></a></li>
-              <li><a href="/#about"><%= gettext "About" %></a></li>
-              <li><a href="#"><%= gettext "Join" %></a></li>
-            </ul>
-            </ul>
-          </div>
-        </nav>
-    </header>
-
+  <body class="hack">
     <div class="container">
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <!-- <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p> -->
+
+      <aside>
+        <nav class="side-nav__component">
+          <ul class="side-nav-list">
+            <li><a href="<%= page_path(@conn, :index) %>"><%= gettext "Main" %></a></li>
+            <li><a href="<%= event_path(@conn, :index) %>"><%= gettext "Events" %></a></li>
+            <li><a href="<%= speaker_path(@conn, :index) %>"><%= gettext "Speakers" %></a></li>
+            <li><a href="<%= suggested_talk_path(@conn, :new) %>"><%= gettext "Suggest talk" %></a></li>
+            <li><a href="/#about"><%= gettext "About" %></a></li>
+            <li><a href="#"><%= gettext "Join" %></a></li>
+            <!-- TODO: add 'talks' section with search -->
+          </ul>
+        </nav>
+      </aside>
 
       <main role="main">
         <%= render @view_module, @view_template, assigns %>

@@ -1,0 +1,17 @@
+
+<div class="card">
+  <header class="card-header">
+    <a href="<%= event_path(@conn, :show, @event.id) %>">
+      <%= @event.name %></a>, <%= pretty_time(@event.time_at) %>
+  </header>
+  <div class="card-content">
+    <div class="inner">
+      <%= for talk <- @event.event_speakers do %>
+        <%= render ElixirLangMoscow.EventSpeakerView, "talk.html",
+            conn: @conn,
+            event: @event,
+            event_speaker: talk %>
+      <% end %>
+    </div>
+  </div>
+</div>

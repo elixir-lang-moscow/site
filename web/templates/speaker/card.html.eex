@@ -1,0 +1,20 @@
+
+<div class="card">
+  <header class="card-header">
+    <a href="<%= speaker_path(@conn, :show, @speaker.slug) %>">
+      <%= @speaker.name %>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="inner">
+      <img src="<%= avatar_url(@speaker) %>"
+           alt="<%= @speaker.name %>(<%= @speaker.company %>)"
+           title="<%= @speaker.name %>(<%= @speaker.company %>)" />
+      <%= if Map.has_key?(@speaker, :company) do %>
+        <p>
+          <%= @speaker.company %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -13,12 +13,6 @@ exports.config = {
       //
       // To change the order of concatenation of files, explicitly mention here
       // https://github.com/brunch/brunch/tree/master/docs#concatenation
-      order: {
-        before: [
-          "bower_components/jquery/dist/jquery.min.js",
-          "bower_components/Materialize/dist/js/materialize.min.js"
-        ]
-      }
     },
     stylesheets: {
       joinTo: "css/app.css"
@@ -56,8 +50,13 @@ exports.config = {
     sass: {
       options: {
         allowCache: true,
-        includePaths: ["bower_components/Materialize/sass"]
+        includePaths: ["node_modules/hack/dist"]
       }
+    },
+    postcss: {
+      processors: [
+        require('autoprefixer')(['last 2 versions', 'ie > 8'])
+      ]
     }
   },
 
@@ -73,6 +72,6 @@ exports.config = {
     enabled: true,
     // Whitelist the npm deps to be pulled in as front-end assets.
     // All other deps in package.json will be excluded from the bundle.
-    whitelist: []
+    whitelist: ["hack"]
   }
 };

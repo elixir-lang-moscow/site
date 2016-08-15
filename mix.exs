@@ -25,7 +25,6 @@ defmodule ElixirLangMoscow.Mixfile do
   end
 
   # Configuration for the OTP application.
-  #
   # Type `mix help compile.app` for more information.
   def application do
     [
@@ -35,7 +34,7 @@ defmodule ElixirLangMoscow.Mixfile do
         :logger, :gettext, :phoenix_ecto,
         :postgrex, :comeonin, :ex_aws,
         :httpoison, :swoosh, :phoenix_swoosh,
-        :exconstructor
+        :exconstructor, :timex,
      ]
     ]
   end
@@ -45,14 +44,12 @@ defmodule ElixirLangMoscow.Mixfile do
   defp elixirc_paths(_),     do: ["lib", "web"]
 
   # Specifies your project dependencies.
-  #
   # Type `mix help deps` for examples and options.
   defp deps do
     [
       # Phoenix:
       {:phoenix, "~> 1.1.4"},
       {:postgrex, ">= 0.0.0"},
-      {:phoenix_ecto, "~> 2.0"},
       {:phoenix_html, "~> 2.4"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.9"},
@@ -61,13 +58,14 @@ defmodule ElixirLangMoscow.Mixfile do
       # Model helpers:
       {:ecto_autoslug_field, "~> 0.1"},
       {:exconstructor, "~> 1.0.2"},
+      {:timex, "~> 3.0"},
 
       # Auth:
       {:guardian, "~> 0.10.0"},
       {:comeonin, "~> 2.4"},
 
       # Administration:
-      {:ex_admin, "~> 0.7.2"},
+      {:ex_admin, "~> 0.7"},
 
       # Amazon image hosting:
       {:ex_aws, "~> 0.4.10"},

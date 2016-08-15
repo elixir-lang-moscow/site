@@ -2,6 +2,12 @@ defmodule ElixirLangMoscow.EventSpeakerSlug do
   use EctoAutoslugField.Slug, from: :title, to: :slug
 end
 
+# FIXME: this is supposed to be a fix to the `ex_admin` bug, which
+# renders `:slug` as a file-field.
+# defimpl ExAdmin.Render, for: ElixirLangMoscow.EventSpeakerSlug do
+#   def to_string(data), do: raise "called"
+# end
+
 defmodule ElixirLangMoscow.EventSpeaker do
   use ElixirLangMoscow.Web, :model
 

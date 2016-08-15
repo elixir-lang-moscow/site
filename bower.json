@@ -16,7 +16,5 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "Materialize": "materialize#~0.97.6"
-  }
+  "dependencies": {}
 }

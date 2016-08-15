@@ -1,0 +1,12 @@
+// Useful mixins:
+
+@mixin max-width($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin hide {
+  display: none;
+  visibility: hidden;
+}

@@ -1,0 +1,8 @@
+// Styles for `events` and `event` components
+
+@import "../mixins/abstracts";
+
+
+.events__component {
+  @extend %wraped_grid_component;
+}

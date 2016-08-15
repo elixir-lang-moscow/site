@@ -1,26 +1,12 @@
-<h2>Show event</h2>
+<h1><%= gettext "Event" %></h1>
 
-<ul>
+<div class="event__component">
+  <section>
+    <h2><%= @event.location %></h2>
+    <%= render "card.html", event: @event, conn: @conn %>
+  </section>
 
-  <li>
-    <strong>Name:</strong>
-    <%= @event.name %>
-  </li>
-
-  <li>
-    <strong>Location:</strong>
-    <%= @event.location %>
-  </li>
-
-  <li>
-    <strong>Time at:</strong>
-    <%= @event.time_at %>
-  </li>
-
-  <%= for talk <- @event.event_speakers do %>
-    <a href="<%= event_speaker_path(@conn, :show, @event.id, talk.slug) %>">
-      <%= talk.title %>
-    </a>
-  <% end %>
-
-</ul>
+  <section>
+    <h2><%= gettext "Partners" %></h2>
+  </section>
+</div>

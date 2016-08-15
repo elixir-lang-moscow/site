@@ -1,19 +1,14 @@
 <h1>Speakers</h1>
 
-<ul>
-  <%= for speaker <- @speakers do %>
-  <li>
-    <strong>Speaker:</strong>
-    <strong>
-      <a href="<%= speaker_path(@conn, :show, speaker.slug) %>">
-        <%= speaker.name %>
-      </a>
-    </strong>
-    <div>
-      <img src="<%= avatar_url(speaker) %>" />
-    </div>
-    <%= speaker.company %>
-  </li>
-  <% end %>
+<div class="speakers__component">
 
-</ul>
+  <div class="grid -middle">
+
+    <%= for speaker <- @speakers do %>
+    <div class="cell -4of12">
+      <%= render "card.html", speaker: speaker, conn: @conn %>
+    </div>
+    <% end %>
+
+  </div>
+</div>

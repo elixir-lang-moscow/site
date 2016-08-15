@@ -1,30 +1,24 @@
-<h2>Show speaker</h2>
+<h1><%= gettext "Speaker" %></h1>
 
-<ul>
+<div class="speaker__component">
 
-  <li>
-    <strong>Name:</strong>
-    <%= @speaker.name %>
-  </li>
+  <div class="grid -middle -center">
 
-  <li>
-    <strong>Speaker:</strong>
-    <div>
-      <img src="<%= avatar_url(@speaker) %>" />
+    <div class="cell -4of12">
+      <%= render "card.html", speaker: @speaker, conn: @conn %>
     </div>
-    <%= @speaker.name %>
-    <%= @speaker.company %>
-  </li>
 
-  <li>
-    <strong>Events:</strong>
+  </div>
 
-    <%= for talk <- @speaker.event_speakers do %>
-    <a href="<%= event_speaker_path(@conn, :show, talk.event.id, talk.slug) %>">
-      <%= talk.title %>;
-    </a>
-    <% end %>
+  <div class="speaker-events">
+    <h2><%= gettext "Talks" %></h2>
 
-  </li>
+      <%= for talk <- @speaker.event_speakers do %>
+        <%= render ElixirLangMoscow.EventSpeakerView, "talk.html",
+              conn: @conn,
+              event: talk.event,
+              event_speaker: talk %>
+      <% end %>
 
-</ul>
+  </div>
+</div>

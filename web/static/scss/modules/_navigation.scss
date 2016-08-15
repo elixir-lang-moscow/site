@@ -1,0 +1,40 @@
+// Navigation component
+
+@import "../mixins/mixins";
+@import "../partials/brand";
+
+
+.side-nav__component {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 230px;
+  left: 46px;
+
+  @include max-width($screen-bg) {
+    position: static;
+  }
+
+  .side-nav-list {
+    width: 200px;
+
+    @include max-width($screen-bg) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    > li {
+      @include max-width($screen-bg) {
+        padding-left: 0;
+      }
+
+      &::after {
+        @include max-width($screen-bg) {
+          @include hide();
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,33 @@
+// Abstract components.
+
+
+@import "../partials/brand";
+
+
+%base_card_component {
+  .card {
+    .inner {
+      img {
+        margin: 0 auto;
+      }
+
+      p {
+        margin-top: 5px;
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+%wraped_grid_component {
+  .grid {
+    flex-wrap: wrap;
+
+    .cell {
+      padding-bottom: $spacer;
+      padding-right: $spacer;
+    }
+  }
+}

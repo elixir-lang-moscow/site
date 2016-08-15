@@ -1,0 +1,14 @@
+// Styles for `speakers` and `speaker` components
+
+@import "../mixins/abstracts";
+
+
+.speakers__component {
+  @extend %base_card_component;
+  @extend %wraped_grid_component;
+}
+
+
+.speaker__component {
+  @extend %base_card_component;
+}
