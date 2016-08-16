@@ -14,6 +14,6 @@
   </div>
 
   <div class="form-group">
-    <%= submit "Login", class: "btn btn-primary" %>
+    <%= submit "Login", class: "btn btn-primary btn-ghost" %>
   </div>
 <% end %>

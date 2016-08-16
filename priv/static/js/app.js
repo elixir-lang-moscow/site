@@ -110,8 +110,6 @@
   globals.require = require;
 })();
 require.register("web/static/js/app", function(exports, require, module) {
-"use strict";
-
 // Brunch automatically concatenates all files in your
 // watched paths. Those paths can be configured at
 // config.paths.watched in "brunch-config.js".
@@ -132,13 +130,8 @@ require.register("web/static/js/app", function(exports, require, module) {
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-
-(function (document, window, $) {
-  $(document).ready(function () {
-    $(".button-collapse").sideNav();
-  });
-})(document, window, $);
+"use strict";
 });
 
-require('web/static/js/app');
+;require('web/static/js/app');
 //# sourceMappingURL=app.js.map

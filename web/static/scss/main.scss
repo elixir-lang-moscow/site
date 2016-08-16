@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+// normalize.css (should be the first one)
+@import "normalize";
+
 // hack.css
 @import "hack";
 
