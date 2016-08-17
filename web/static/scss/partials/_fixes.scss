@@ -1,8 +1,10 @@
 // This module contains all the styles that are
 // required to reset base css or `hack` css.
 
-main {
+main, aside {
   margin: 1em 0;
+  max-width: 70rem;
+  padding: 0 1rem;
 }
 
 img {

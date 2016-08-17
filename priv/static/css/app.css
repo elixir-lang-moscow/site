@@ -1249,25 +1249,27 @@ select.form-control {
     width: 100%; } }
 
 /* line 4, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
-main {
-  margin: 1em 0; }
+main, aside {
+  margin: 1em 0;
+  max-width: 70rem;
+  padding: 0 1rem; }
 
-/* line 8, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 img {
   display: block;
   max-width: 100%;
   height: auto; }
 
-/* line 18, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 20, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack hr {
   font-size: initial;
   line-height: initial; }
 
-/* line 24, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 26, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack section {
   margin-bottom: 50px; }
 
-/* line 28, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 30, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack .avatarholder {
   width: 75px;
   height: 75px;
@@ -1278,7 +1280,7 @@ img {
   background-repeat: initial;
   background-color: initial; }
 
-/* line 40, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 42, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack .media .media-body {
   min-width: 250px; }
 
@@ -1286,35 +1288,35 @@ img {
 .btn {
   display: inline-block; }
 
+/* line 6, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_logo.scss */
+.logo__component {
+  max-width: 75%;
+  margin: 10px auto; }
+
 /* line 7, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
 .side-nav__component {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 230px;
-  left: 46px; }
-  @media screen and (max-width: 1145px) {
+  max-width: 75%;
+  margin: 5rem auto; }
+  @media screen and (max-width: 768px) {
     /* line 7, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
     .side-nav__component {
-      position: static; } }
-  /* line 18, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
-  .side-nav__component .side-nav-list {
-    width: 200px; }
-    @media screen and (max-width: 1145px) {
-      /* line 18, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
-      .side-nav__component .side-nav-list {
-        width: 100%;
-        display: flex;
-        justify-content: space-between; } }
-    @media screen and (max-width: 1145px) {
-      /* line 27, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
-      .side-nav__component .side-nav-list > li {
-        padding-left: 0; } }
-    @media screen and (max-width: 1145px) {
-      /* line 32, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
-      .side-nav__component .side-nav-list > li::after {
-        display: none;
-        visibility: hidden; } }
+      max-width: 100%;
+      margin: 0; } }
+  @media screen and (max-width: 768px) {
+    /* line 16, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
+    .side-nav__component .side-nav-list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between; } }
+  @media screen and (max-width: 768px) {
+    /* line 23, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
+    .side-nav__component .side-nav-list > li {
+      padding-left: 0; } }
+  @media screen and (max-width: 768px) {
+    /* line 28, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
+    .side-nav__component .side-nav-list > li::after {
+      display: none;
+      visibility: hidden; } }
 
 /* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
 .speakers__component .card .inner img, .speaker__component .card .inner img {

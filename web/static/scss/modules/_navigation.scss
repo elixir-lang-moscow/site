@@ -5,19 +5,15 @@
 
 
 .side-nav__component {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 230px;
-  left: 46px;
+  max-width: 75%;
+  margin: 5rem auto;
 
   @include max-width($screen-bg) {
-    position: static;
+    max-width: 100%;
+    margin: 0;
   }
 
   .side-nav-list {
-    width: 200px;
-
     @include max-width($screen-bg) {
       width: 100%;
       display: flex;
@@ -37,4 +33,5 @@
     }
 
   }
+
 }
