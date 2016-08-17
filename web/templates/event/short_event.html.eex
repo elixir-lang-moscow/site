@@ -1,0 +1,6 @@
+
+<div class="alert alert-info">
+  <a href="<%= event_path(@conn, :show, @event.id) %>">
+    <%= @event.name %></a>, <%= @event.location %>:
+  <%= pretty_time(@event.time_at) %>
+</div>

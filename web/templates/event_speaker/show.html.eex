@@ -1,31 +1,30 @@
-<h2>Show event speaker</h2>
+<div class="event-speaker__component">
 
-<ul>
+  <h1><%= gettext "Talk details" %></h1>
 
-  <li>
-    <strong>Title:</strong>
-    <%= @event_speaker.title %>
-  </li>
+  <div class="event-speaker-wrapper">
+    <%= render "talk.html",
+          event_speaker: @event_speaker,
+          event: @event_speaker.event,
+          conn: @conn %>
+  </div>
 
-  <li>
-    <strong>Speaker:</strong>
-    <div>
-      <img src="<%= avatar_url(@event_speaker.speaker) %>" />
-    </div>
-    <%= @event_speaker.speaker.name %>
-  </li>
+  <div class="event-speaker-event">
+    <h2><%= gettext "Event" %></h2>
+    <%= render ElixirLangMoscow.EventView, "short_event.html",
+           event: @event_speaker.event, conn: @conn %>
+  </div>
 
-  <li>
-    <strong>Event:</strong>
-    <a href="<%= event_path(@conn, :show, @event_speaker.event) %>">
-      <%= @event_speaker.event.name %>
-    </a>
-  </li>
+  <div class="event-speaker-video">
+    <h2><%= gettext "Video" %></h2>
 
-  <%= if has_video?(@event_speaker) do %>
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/<%= @event_speaker.video_link %>"
-      frameborder="0" allowfullscreen></iframe>
-  <% end %>
+    <%= if has_video?(@event_speaker) do %>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/<%= @event_speaker.video_link %>"
+        frameborder="0" allowfullscreen></iframe>
+    <% else %>
+      <p><%= gettext "No video yet" %></p>
+    <% end %>
+  </div>
 
-</ul>
+</div>

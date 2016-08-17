@@ -5,9 +5,9 @@
 
     <h2><%= gettext "Closest event" %></h2>
 
-    <div class="alert alert-info">
-      <%= @closest_event.name %>, <%= @closest_event.location %>:
-      <%= pretty_time(@closest_event.time_at) %>
+    <div class="closest-event">
+      <%= render ElixirLangMoscow.EventView, "short_event.html",
+             event: @closest_event, conn: @conn %>
     </div>
 
     <%= if not Enum.empty?(@closest_event.event_speakers) do %>

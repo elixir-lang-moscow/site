@@ -8,9 +8,9 @@
     <div class="inner">
       <%= for talk <- @event.event_speakers do %>
         <%= render ElixirLangMoscow.EventSpeakerView, "talk.html",
-            conn: @conn,
-            event: @event,
-            event_speaker: talk %>
+              conn: @conn,
+              event: @event,
+              event_speaker: talk %>
       <% end %>
     </div>
   </div>

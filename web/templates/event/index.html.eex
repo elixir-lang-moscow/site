@@ -6,7 +6,7 @@
   <%= for event <- @events do %>
 
       <div class="cell -6of12">
-        <%= render "card.html", event: event, conn: @conn %>
+        <%= render "event.html", event: event, conn: @conn %>
       </div>
 
   <% end %>

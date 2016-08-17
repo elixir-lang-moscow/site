@@ -1352,5 +1352,9 @@ img {
     padding-bottom: 10px;
     padding-right: 10px; }
 
+/* line 8, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_talks.scss */
+.event-speaker__component .event-speaker-event {
+  margin-top: 10px; }
+
 
 /*# sourceMappingURL=app.css.map*/

@@ -3,7 +3,7 @@
 <div class="event__component">
   <section>
     <h2><%= @event.location %></h2>
-    <%= render "card.html", event: @event, conn: @conn %>
+    <%= render "event.html", event: @event, conn: @conn %>
   </section>
 
   <section>
