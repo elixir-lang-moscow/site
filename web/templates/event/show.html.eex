@@ -12,7 +12,7 @@
     <div class="grid event-parners__component">
       <%= for e <- @event.event_partners do %>
 
-      <div class="cell -2of12 event-partner">
+      <div class="cell -3of12 event-partner">
         <a href="<%= e.partner.link %>">
           <img src="<%= image_url(e.partner) %>"
                title="<%= e.partner.name %>"
