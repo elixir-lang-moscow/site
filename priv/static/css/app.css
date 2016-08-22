@@ -1248,28 +1248,32 @@ select.form-control {
   .form {
     width: 100%; } }
 
-/* line 4, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 6, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 main, aside {
   margin: 1em 0;
   max-width: 70rem;
   padding: 0 1rem; }
 
-/* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 12, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 img {
   display: block;
   max-width: 100%;
   height: auto; }
 
-/* line 20, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 21, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+.g-recaptcha {
+  margin-bottom: 10px; }
+
+/* line 29, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack hr {
   font-size: initial;
   line-height: initial; }
 
-/* line 26, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 35, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack section {
   margin-bottom: 50px; }
 
-/* line 30, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 39, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack .avatarholder {
   width: 75px;
   height: 75px;
@@ -1280,7 +1284,7 @@ img {
   background-repeat: initial;
   background-color: initial; }
 
-/* line 42, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 51, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack .media .media-body {
   min-width: 250px; }
 
@@ -1357,6 +1361,14 @@ img {
 /* line 8, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_talks.scss */
 .event-speaker__component .event-speaker-event {
   margin-top: 10px; }
+
+/* line 6, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_partners.scss */
+.event-parners__component {
+  justify-content: center; }
+  /* line 9, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_partners.scss */
+  .event-parners__component .event-partner {
+    padding: 10px;
+    max-width: 200px; }
 
 
 /*# sourceMappingURL=app.css.map*/

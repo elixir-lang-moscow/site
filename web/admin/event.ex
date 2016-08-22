@@ -1,5 +1,7 @@
 defmodule ElixirLangMoscow.ExAdmin.Event do
   use ExAdmin.Register
+
+  alias ElixirLangMoscow.Repo
   alias ElixirLangMoscow.{Event, Registration}
 
   register_resource Event do
@@ -14,7 +16,14 @@ defmodule ElixirLangMoscow.ExAdmin.Event do
     # actions :all, only: [:index, :show, :create, :new]
 
     query do
-      %{all: [preload: [:registrations, :event_speakers, :speakers]]}
+      %{all: [
+        preload: [
+          :registrations,
+          :event_speakers,
+          :speakers,
+          :event_partners,
+          :partners,
+        ]]}
     end
 
     show event do
@@ -24,6 +33,12 @@ defmodule ElixirLangMoscow.ExAdmin.Event do
         row :time_at
         row :uid
         row "Registration link", &(a(&1.registration_link, href: &1.registration_link))
+      end
+
+      panel "Partners" do
+        table_for event.partners do
+          column "Name", fn(item) -> auto_link item end
+        end
       end
 
       panel "Speakers" do

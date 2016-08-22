@@ -21,3 +21,11 @@ config :elixir_lang_moscow, ElixirLangMoscow.Repo,
 # Configure Timepad
 config :elixir_lang_moscow, :timepad,
   key: "test-me"
+
+# Configure Recaptcha
+config :recaptcha,
+    api_config: %{
+      verify_url: "https://www.google.com/recaptcha/api/siteverify",
+      public_key: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
+      private_key: "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe",
+    }

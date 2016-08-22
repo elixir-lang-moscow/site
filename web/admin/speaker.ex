@@ -26,7 +26,7 @@ defmodule ElixirLangMoscow.ExAdmin.Speaker do
         row :name
         row :slug
         row :company
-        row "Avatar", &(img(src: Speaker.avatar_url(&1), height: 250))
+        row "Avatar", &(img(src: Speaker.avatar_url(&1), height: 200))
       end
     end
 

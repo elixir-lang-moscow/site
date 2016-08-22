@@ -34,7 +34,7 @@ defmodule ElixirLangMoscow.Mixfile do
         :logger, :gettext, :phoenix_ecto,
         :postgrex, :comeonin, :ex_aws,
         :httpoison, :swoosh, :phoenix_swoosh,
-        :exconstructor, :timex,
+        :exconstructor, :timex, :recaptcha,
      ]
     ]
   end
@@ -54,6 +54,9 @@ defmodule ElixirLangMoscow.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.9"},
       {:cowboy, "~> 1.0"},
+
+      # Recaptcha
+      {:recaptcha, "~> 1.1.0"},
 
       # Model helpers:
       {:ecto_autoslug_field, "~> 0.1"},

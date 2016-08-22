@@ -1,5 +1,6 @@
 defmodule ElixirLangMoscow.ExAdmin.EventSpeaker do
   use ExAdmin.Register
+  
   alias ElixirLangMoscow.{Event, Speaker, EventSpeaker, Repo}
 
   register_resource EventSpeaker do

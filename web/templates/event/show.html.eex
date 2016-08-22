@@ -8,5 +8,19 @@
 
   <section>
     <h2><%= gettext "Partners" %></h2>
+
+    <div class="grid event-parners__component">
+      <%= for e <- @event.event_partners do %>
+
+      <div class="cell -2of12 event-partner">
+        <a href="<%= e.partner.link %>">
+          <img src="<%= image_url(e.partner) %>"
+               title="<%= e.partner.name %>"
+               alt="<%= e.partner.name %>" />
+        </a>
+      </div>
+
+      <% end %>
+    </div>
   </section>
 </div>

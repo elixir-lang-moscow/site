@@ -3,7 +3,9 @@ defimpl ExAdmin.Authentication, for: Plug.Conn do
   alias ElixirLangMoscow.Authentication, as: Auth
 
   def use_authentication?(_), do: true
+
   def current_user(conn), do: Auth.current_user(conn)
+
   def current_user_name(conn) do
     user = Auth.current_user(conn)
     case user do
@@ -11,7 +13,9 @@ defimpl ExAdmin.Authentication, for: Plug.Conn do
       _ -> user.username
     end
   end
+
   def session_path(conn, action), do: Helpers.auth_path(conn, action)
+  
 end
 
 

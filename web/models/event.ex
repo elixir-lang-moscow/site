@@ -6,7 +6,7 @@ defmodule ElixirLangMoscow.Event do
     field :location, :string
     field :time_at, Ecto.DateTime
 
-    field :uid, :string  # unique id from the TimePad
+    field :uid, :string
     field :registration_link, :string
     field :max_registrations, :integer
 
@@ -14,6 +14,9 @@ defmodule ElixirLangMoscow.Event do
 
     has_many :event_speakers, ElixirLangMoscow.EventSpeaker
     has_many :speakers, through: [:event_speakers, :speaker]
+
+    has_many :event_partners, ElixirLangMoscow.EventPartner
+    has_many :partners, through: [:event_partners, :partner]
 
     timestamps
   end

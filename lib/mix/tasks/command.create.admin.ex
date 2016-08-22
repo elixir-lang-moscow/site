@@ -1,3 +1,6 @@
+# TODO: create task `mix command.save.csv` to download a csv-file with
+# the all created registration and format (what data do we need?)
+
 defmodule Mix.Tasks.Command.Create.Admin do
   use Mix.Task
 

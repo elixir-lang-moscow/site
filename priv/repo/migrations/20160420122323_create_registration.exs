@@ -17,12 +17,11 @@ defmodule ElixirLangMoscow.Repo.Migrations.CreateRegistration do
 
       timestamps
     end
-    
+
     create index(:registrations, [:event_id])
-    create unique_index(:registrations, [:email, :event_id], 
+    create unique_index(:registrations, [:email, :event_id],
       name: :registrations_email_event_id_index)
 
-    # Event-based indexes:
     create unique_index(:registrations, [:uid])
     create unique_index(:registrations, [:code])
     create unique_index(:registrations, [:barcode])

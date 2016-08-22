@@ -13,8 +13,9 @@ defmodule ElixirLangMoscow.Repo.Migrations.CreateEvent do
 
       timestamps
     end
-    create index(:events, [:time_at])
 
+    create index(:events, [:time_at])
     create unique_index(:events, [:uid])
+    
   end
 end

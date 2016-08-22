@@ -1,0 +1,15 @@
+// How partners renders
+
+@import "../partials/brand";
+
+
+.event-parners__component {
+  justify-content: center;
+
+  .event-partner {
+    padding: $spacer;
+
+    // Images should be already croped appropriately:
+    max-width: 200px;
+  }
+}

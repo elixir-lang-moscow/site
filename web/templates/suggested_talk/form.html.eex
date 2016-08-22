@@ -29,6 +29,8 @@
     <%= error_tag f, :message %>
   </div>
 
+  <%= raw Recaptcha.display %>
+
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary btn-ghost" %>
   </div>

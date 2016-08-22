@@ -1,6 +1,8 @@
 // This module contains all the styles that are
 // required to reset base css or `hack` css.
 
+@import "brand";
+
 main, aside {
   margin: 1em 0;
   max-width: 70rem;
@@ -11,6 +13,13 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+
+// Recaptcha
+
+.g-recaptcha {
+  margin-bottom: $spacer;
 }
 
 

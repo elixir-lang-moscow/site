@@ -22,8 +22,9 @@ Or:
 We do use a bunch of integrations, so if you want to replicate the whole project you will need:
 
   - Amazon AWS: set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
-  - Mailgun: set ``
+  - Mailgun: set `MAILGUN_API_KEY`
   - Timepad: set `TIMEPAD_KEY`
+  - ReCaptcha: set `RECAPTCHA_KEY`
 
 ## Docker
 

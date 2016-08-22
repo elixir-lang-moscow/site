@@ -5,9 +5,10 @@ defmodule ElixirLangMoscow.BaseTest do
   alias ElixirLangMoscow.Event
   alias ElixirLangMoscow.Registration
   alias ElixirLangMoscow.SuggestedTalk
+  alias ElixirLangMoscow.Partner
 
 
-  def valid_event() do
+  def valid_event do
     %{
       name: "some content",
       location: "some content",
@@ -17,8 +18,8 @@ defmodule ElixirLangMoscow.BaseTest do
       max_registrations: 20,
     }
   end
-  def valid_speaker(), do: %{name: "some content"}
-  def valid_registration() do
+  def valid_speaker, do: %{name: "some content"}
+  def valid_registration do
     %{
       company: "SomeCompany",
       first_name: "SomeName",
@@ -30,12 +31,23 @@ defmodule ElixirLangMoscow.BaseTest do
       # event_id is set on demand, later on
     }
   end
-  def valid_suggested_talk() do
+  def valid_suggested_talk do
     %{
       email: "some@content.com",
       message: "some content",
       name: "some content",
       topic: "some content",
+    }
+  end
+  def valid_partner do
+    %{
+      link: "some content",
+      name: "some content",
+      # image: %Plug.Upload{
+      #   content_type: "image/png",
+      #   filename: "test.png",
+      #   path: Path.join([System.cwd!(), "test", "fixtures", "images", "test.png"]),
+      # }
     }
   end
 
@@ -46,6 +58,10 @@ defmodule ElixirLangMoscow.BaseTest do
   def create_event do
     Event.changeset(%Event{}, valid_event()) |> Repo.insert!
   end
+
+  # def create_partner do
+  #   Partner.changeset(%Partner{}, valid_partner()) |> Repo.insert!
+  # end
 
   def create_registration do
     create_registration(create_event())

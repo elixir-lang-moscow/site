@@ -7,13 +7,14 @@ defmodule ElixirLangMoscow.Speaker do
   use Arc.Ecto.Model
 
   alias ElixirLangMoscow.SpeakerSlug
+  alias ElixirLangMoscow.Avatar
 
   schema "speakers" do
     field :name, :string
     field :company, :string
 
     field :slug, SpeakerSlug.Type
-    field :avatar, ElixirLangMoscow.Avatar.Type
+    field :avatar, Avatar.Type
 
     has_many :event_speakers, ElixirLangMoscow.EventSpeaker
     has_many :events, through: [:event_speakers, :event]
@@ -41,8 +42,7 @@ defmodule ElixirLangMoscow.Speaker do
     |> cast_attachments(params, @required_file_fields, @optional_file_fields)
   end
 
-  def avatar_url(model) do
-    # TODO: test how `signed: true` works:
-    ElixirLangMoscow.Avatar.url({model.avatar, model})
-  end
+  # TODO: test how `signed: true` works:
+  def avatar_url(model), do: Avatar.url({model.avatar, model})
+
 end

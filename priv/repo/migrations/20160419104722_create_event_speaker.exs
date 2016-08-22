@@ -14,11 +14,13 @@ defmodule ElixirLangMoscow.Repo.Migrations.CreateEventSpeaker do
 
       timestamps
     end
+
     create index(:event_speakers, [:event_id])
     create index(:event_speakers, [:speaker_id])
 
     create unique_index(:event_speakers, [:title])
     create unique_index(:event_speakers, [:slug])
     create unique_index(:event_speakers, [:video_link])
+    
   end
 end

@@ -33,22 +33,25 @@
 
 <hr />
 
+<%= if not Enum.empty?(@events) do %>
 <section>
   <h2><%= gettext "Recent events" %></h2>
 
   <ul>
-
   <%= for event <- @events do %>
+
     <li>
       <a href="<%= event_path(@conn, :show, event) %>"><%= event.name %></a>,
       <%= event.location %>, <%= event.time_at %>
     </li>
-  <% end %>
 
+  <% end %>
   </ul>
 </section>
+<% end %>
 
 
+<%= if not Enum.empty?(@recent_talks) do %>
 <section>
   <h2><%= gettext "Recent talks" %></h2>
 
@@ -59,3 +62,4 @@
           event_speaker: talk %>
   <% end %>
 </section>
+<% end %>

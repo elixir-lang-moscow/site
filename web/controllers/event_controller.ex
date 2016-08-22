@@ -13,7 +13,10 @@ defmodule ElixirLangMoscow.EventController do
   def show(conn, %{"id" => id}) do
     event =
       Repo.get!(Event, id)
-      |> Repo.preload([{:event_speakers, :speaker}])
+      |> Repo.preload([
+        {:event_speakers, :speaker},
+        {:event_partners, :partner},
+      ])
     render(conn, "show.html", event: event)
   end
 end

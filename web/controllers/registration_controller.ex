@@ -1,3 +1,6 @@
+# TODO: create abstract behaviour for any kind of
+# registration provider, and implement in for the Timepad at first.
+
 defmodule ElixirLangMoscow.RegistrationController.Timepad do
   defstruct [:id, :code, :barcode, :status_raw, :event_id, :answers]
 
