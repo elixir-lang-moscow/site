@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Elixir Lang Moscow">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
@@ -26,7 +24,38 @@
     <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- Meta information -->
+    <meta name="author" content="Elixir Lang Moscow">
+    <meta name="description" content="Site for Elixir monthly meetups in Moscow">
+    <meta name="keywords" content="Elixir, meetup, Moscow">
+    
+    <link rel="canonical" href="http://elixir-lang.moscow" />
+
     <title>Elixir meetups in Moscow</title>
+
+    <!-- Graph API -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_ru" />
+    <meta property="og:locale:alternate" content="en_us" />
+    <meta property="og:updated_time" content="2016-08-23T13:35:44+06:00" />
+    <meta property="og:url" content="http://elixir-lang.moscow" />
+    <meta property="og:site_name" content="Elixir Lang Moscow" />
+    <meta property="og:title" content="Elixir meetups in Moscow" />
+    <meta property="og:description" content="Site for Elixir monthly meetups in Moscow" />
+    <meta property="og:image"
+          content="https://elixir-lang-moscow.herokuapp.com/images/elixir-lang-moscow-logo-12a9e47c77802b946e60bd7bcf20dbda.png?vsn=d" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Site for Elixir monthly meetups in Moscow" />
+    <meta name="twitter:title" content="Elixir meetups in Moscow" />
+    <meta name="twitter:site" content="http://elixir-lang.moscow" />
+    <meta name="twitter:domain" content="http://elixir-lang.moscow" />
+    <meta name="twitter:image:src"
+          content="https://elixir-lang-moscow.herokuapp.com/images/elixir-lang-moscow-logo-12a9e47c77802b946e60bd7bcf20dbda.png?vsn=d" />
+
+    <link rel="image_src"
+          href="https://elixir-lang-moscow.herokuapp.com/images/elixir-lang-moscow-logo-12a9e47c77802b946e60bd7bcf20dbda.png?vsn=d" />
 
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
