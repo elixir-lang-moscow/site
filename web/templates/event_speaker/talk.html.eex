@@ -1,7 +1,7 @@
-<div class="media">
+<div class="media talk__component">
 
   <div class="media-left">
-    <div class="avatarholder">
+    <div class="talk-person-image">
       <img src="<%= avatar_url(@event_speaker.speaker) %>"
            alt="<%= @event_speaker.speaker.name %>"
            title="<%= @event_speaker.speaker.name %>" />

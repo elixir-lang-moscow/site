@@ -2,7 +2,10 @@
 
 <p>
   Thanks, <%= full_name(@registration) %>!
+  You have successfully registered.
+
   See you on <%= @registration.event.time_at %>.
+  Location: <%= @registration.event.location %>.
 
   Please, have your ID with you.
 </p>

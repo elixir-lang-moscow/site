@@ -1248,32 +1248,32 @@ select.form-control {
   .form {
     width: 100%; } }
 
-/* line 6, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 7, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 main, aside {
   margin: 1em 0;
   max-width: 70rem;
   padding: 0 1rem; }
 
-/* line 12, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 13, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 img {
   display: block;
   max-width: 100%;
   height: auto; }
 
-/* line 21, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 22, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .g-recaptcha {
   margin-bottom: 10px; }
 
-/* line 29, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 30, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack hr {
   font-size: initial;
   line-height: initial; }
 
-/* line 35, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 36, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack section {
   margin-bottom: 50px; }
 
-/* line 39, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 40, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack .avatarholder {
   width: 75px;
   height: 75px;
@@ -1284,7 +1284,7 @@ img {
   background-repeat: initial;
   background-color: initial; }
 
-/* line 51, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
+/* line 52, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/partials/_fixes.scss */
 .hack .media .media-body {
   min-width: 250px; }
 
@@ -1322,23 +1322,10 @@ img {
       display: none;
       visibility: hidden; } }
 
-/* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
-.speakers__component .card .inner img, .speaker__component .card .inner img {
-  margin: 0 auto; }
-
-/* line 14, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
-.speakers__component .card .inner p, .speaker__component .card .inner p {
-  margin-top: 5px;
-  margin-bottom: 0;
-  text-align: center; }
-
-/* line 25, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
-.speakers__component .grid, .events__component .grid {
-  flex-wrap: wrap; }
-  /* line 28, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
-  .speakers__component .grid .cell, .events__component .grid .cell {
-    padding-bottom: 10px;
-    padding-right: 10px; }
+/* line 4, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_footer.scss */
+main footer.footer__component {
+  border-top: 1px solid #ccc;
+  margin-top: 5rem; }
 
 /* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
 .speakers__component .card .inner img, .speaker__component .card .inner img {
@@ -1358,9 +1345,32 @@ img {
     padding-bottom: 10px;
     padding-right: 10px; }
 
-/* line 8, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_talks.scss */
+/* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
+.speakers__component .card .inner img, .speaker__component .card .inner img {
+  margin: 0 auto; }
+
+/* line 14, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
+.speakers__component .card .inner p, .speaker__component .card .inner p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-align: center; }
+
+/* line 25, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
+.speakers__component .grid, .events__component .grid {
+  flex-wrap: wrap; }
+  /* line 28, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
+  .speakers__component .grid .cell, .events__component .grid .cell {
+    padding-bottom: 10px;
+    padding-right: 10px; }
+
+/* line 9, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_talks.scss */
 .event-speaker__component .event-speaker-event {
   margin-top: 10px; }
+
+/* line 15, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_talks.scss */
+.talk__component .talk-person-image {
+  width: 75px;
+  height: 75px; }
 
 /* line 6, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_partners.scss */
 .event-parners__component {

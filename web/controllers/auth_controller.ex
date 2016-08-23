@@ -24,7 +24,7 @@ defmodule ElixirLangMoscow.AuthController do
         |> redirect(to: "/")
       :error ->
         conn
-        |> put_flash(:info, "Wrong username or password")
+        |> put_flash(:error, "Wrong username or password")
         |> render("login.html")
     end
   end

@@ -16,6 +16,8 @@ defmodule ElixirLangMoscow.BaseTest do
       uid: "1",
       registration_link: "http://somelink.com",
       max_registrations: 20,
+      visible: true,
+      on_air: false,
     }
   end
   def valid_speaker, do: %{name: "some content"}

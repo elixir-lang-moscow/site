@@ -2,13 +2,15 @@ defmodule ElixirLangMoscow.EventPartner do
   use ElixirLangMoscow.Web, :model
 
   schema "event_partners" do
+    field :priority, :integer, default: 1
+
     belongs_to :event, ElixirLangMoscow.Event
     belongs_to :partner, ElixirLangMoscow.Partner
 
     timestamps
   end
 
-  @required_fields ~w(event_id partner_id)
+  @required_fields ~w(event_id partner_id priority)
   @optional_fields ~w()
 
   @doc """

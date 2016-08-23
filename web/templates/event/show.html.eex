@@ -10,7 +10,7 @@
     <h2><%= gettext "Partners" %></h2>
 
     <div class="grid event-parners__component">
-      <%= for e <- @event.event_partners do %>
+      <%= for e <- @event_partners do %>
 
       <div class="cell -3of12 event-partner">
         <a href="<%= e.partner.link %>">

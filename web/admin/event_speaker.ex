@@ -1,7 +1,12 @@
 defmodule ElixirLangMoscow.ExAdmin.EventSpeaker do
   use ExAdmin.Register
-  
+
   alias ElixirLangMoscow.{Event, Speaker, EventSpeaker, Repo}
+
+  # TODO: why exception is raised?
+  #
+  # FunctionClauseError at GET /admin/event_speakers/2/edit
+  # no function clause matching in Access.fetch/2
 
   register_resource EventSpeaker do
     menu priority: 2

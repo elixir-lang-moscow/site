@@ -41,8 +41,8 @@ defmodule ElixirLangMoscow.Router do
     resources "/speakers", SpeakerController, only: [:show, :index]
 
     # Suggest new talk:
-    resources "/suggest-talk", SuggestedTalkController,
-      only: [:new, :create]
+    get "/suggest-talk", SuggestedTalkController, :new
+    post "/suggest-talk", SuggestedTalkController, :create
 
     # Index page:
     get "/", PageController, :index

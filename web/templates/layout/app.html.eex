@@ -57,8 +57,20 @@
           <%= if error do %>
             <div class="alert alert-error" role="alert"><%= error %></div>
           <% end %>
-        
+
           <%= render @view_module, @view_template, assigns %>
+
+          <footer class="footer__component">
+            <div class="footer-wrapper">
+              <p>
+                Created by <a href="https://github.com/wemake-services">wemake.services</a>,
+                special thanks to <a href="http://ura.al">ura.al</a> for the awesome logo.
+              </p>
+              <p>
+                This project is open-source, feel <a href="https://github.com/elixir-lang-moscow/site">free to contribute</a>.
+              </p>
+            </div>
+          </footer>
       </main>
     </div>
 

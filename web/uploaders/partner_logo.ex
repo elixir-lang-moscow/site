@@ -4,17 +4,14 @@ defmodule ElixirLangMoscow.PartnerLogo do
   # Include ecto support (requires package arc_ecto installed):
   use Arc.Ecto.Definition
 
+  alias ElixirLangMoscow.Utils
+
   @versions [:original]
   @extension_whitelist ~w(.jpg .jpeg .png)
+  @acl :public_read
 
-  # Whitelist file extensions:
   def validate({file, _}) do
-    # TODO: validate size
-    file_extension =
-      file.file_name
-      |> Path.extname
-      |> String.downcase
-    Enum.member?(@extension_whitelist, file_extension)
+    Utils.validate_extension(@extension_whitelist, file)
   end
 
   def storage_dir(_version, {_file, scope}) do

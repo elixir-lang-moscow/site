@@ -20,7 +20,7 @@ defmodule ElixirLangMoscow.PageController do
     query =
       from e in EventSpeaker,
       join: v in Event, on: e.event_id == v.id,
-      where: v.time_at < ^now,
+      where: v.time_at < ^now and v.visible == true,
       order_by: [v.time_at, e.title],
       limit: 10,
       preload: [:speaker, :event]
@@ -38,8 +38,11 @@ defmodule ElixirLangMoscow.PageController do
   end
 
   defp active_registrations do
+    closest_event = closest_event()
+
     query =
       from r in Registration,
+      join: v in Event, on: r.event_id == v.id,
       where: r.active == true,
       select: count(r.id)
 
