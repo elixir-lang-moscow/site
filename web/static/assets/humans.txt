@@ -1,0 +1,19 @@
+# The humans responsible & technology colophon
+
+wemake.services team:
+
+  Nikita Sobolev
+  Kotenkov Alexander
+
+ura.design team:
+
+  Elio Quoshi - logo
+
+https://wemake.services
+
+# TECHNOLOGY COLOPHON
+
+  Last update: 2016/08/23
+	Language: English / Russian
+	Doctype: HTML5
+  Technologies: Elixir, Phoenix, HTML5, CSS3, SASS, Normalize.css
