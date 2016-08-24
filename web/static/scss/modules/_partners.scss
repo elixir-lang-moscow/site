@@ -6,6 +6,7 @@
 .event-parners__component {
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   .event-partner {
     padding: $spacer;

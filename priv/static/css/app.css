@@ -1375,8 +1375,9 @@ main footer.footer__component {
 /* line 6, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_partners.scss */
 .event-parners__component {
   justify-content: center;
-  align-items: center; }
-  /* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_partners.scss */
+  align-items: center;
+  flex-wrap: wrap; }
+  /* line 11, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_partners.scss */
   .event-parners__component .event-partner {
     padding: 10px;
     max-width: 200px; }
