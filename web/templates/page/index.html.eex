@@ -23,7 +23,6 @@
 
     <h3><%= gettext "Participate" %></h3>
 
-    <p><%= gettext "Active registartions for now:" %> <%= @active_registrations %></p>
     <a class="btn btn-primary btn-ghost" href="<%= @closest_event.registration_link %>">
       <%= gettext "Register" %>
     </a>

@@ -14,6 +14,8 @@ defmodule ElixirLangMoscow.EventSpeaker do
   alias ElixirLangMoscow.EventSpeakerSlug
 
   schema "event_speakers" do
+    # TODO: add field :order
+    
     field :title, :string
     field :description, :string
     field :slug, EventSpeakerSlug.Type
