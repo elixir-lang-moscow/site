@@ -113,7 +113,7 @@
           <footer class="footer__component">
             <div class="footer-wrapper">
               <p>
-                Created by <a href="https://github.com/wemake-services">wemake.services</a>,
+                Created by <a href="http://wemake.services">wemake.services</a>,
                 special thanks to <a href="http://ura.design">ura.design</a> for the awesome logo.
                 Our <a href="http://www.meetup.com/elixir_lang_moscow/">meetup.com</a> page.
               </p>
