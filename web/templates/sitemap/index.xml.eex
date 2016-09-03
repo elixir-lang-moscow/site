@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc><%= page_url(@conn, :index) %></loc>
+    <lastmod><%= last_update_date(@events)  %></lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc><%= suggested_talk_url(@conn, :new) %></loc>
+    <lastmod><%= last_update_date(@events)  %></lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc><%= speaker_url(@conn, :index) %></loc>
+    <lastmod><%= last_update_date(@speakers) %></lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc><%= event_url(@conn, :index) %> </loc>
+    <lastmod><%= last_update_date(@events) %></lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <%= for event <- @events do %>
+    <url>
+      <loc><%= event_url(@conn, :show, event.id) %></loc>
+      <lastmod><%= date_format(event)  %></lastmod>
+      <changefreq>weekly</changefreq>
+    </url>
+  <% end %>
+
+  <%= for talk <- @event_speakers do %>
+    <url>
+      <loc><%= event_speaker_url(@conn, :show, talk.event_id, talk.slug) %> </loc>
+      <lastmod><%= date_format(talk)  %></lastmod>
+      <changefreq>weekly</changefreq>
+    </url>
+  <% end %>
+
+  <%= for speaker <- @speakers do %>
+    <url>
+      <loc><%= speaker_url(@conn, :show, speaker.slug) %></loc>
+      <lastmod><%= date_format(speaker)  %></lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  <% end %>
+
+</urlset>

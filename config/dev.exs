@@ -9,6 +9,9 @@ use Mix.Config
 config :elixir_lang_moscow, ElixirLangMoscow.Endpoint,
   http: [port: 4000],
   debug_errors: true,
+  # To show real error result:
+  # debug_errors: false,
+  # catch_errors: true,
   code_reloader: true,
   check_origin: false,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]

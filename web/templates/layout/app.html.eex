@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Verifications -->
+    <meta name="google-site-verification" content="--BlflYyjR6AwOgTB7jMG1_jLHV4p51bEouONNH2CWs" />
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
@@ -112,6 +115,7 @@
               <p>
                 Created by <a href="https://github.com/wemake-services">wemake.services</a>,
                 special thanks to <a href="http://ura.design">ura.design</a> for the awesome logo.
+                Our <a href="http://www.meetup.com/elixir_lang_moscow/">meetup.com</a> page.
               </p>
               <p>
                 This project is open-source, feel <a href="https://github.com/elixir-lang-moscow/site">free to contribute</a>.

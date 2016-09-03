@@ -15,7 +15,7 @@ defmodule ElixirLangMoscow.EventController do
 
   def show(conn, %{"id" => id}) do
     event =
-      Repo.get!(Event, id)
+      Repo.get_by!(Event, [id: id, visible: true])
       |> Repo.preload([
         {:event_speakers, :speaker},
       ])
@@ -27,6 +27,7 @@ defmodule ElixirLangMoscow.EventController do
         order_by: [desc: :priority],
         preload: [:partner]
       )
+
     render(conn, "show.html", event: event, event_partners: event_partners)
   end
 end

@@ -38,15 +38,18 @@ defmodule ElixirLangMoscow.PageController do
   end
 
   defp active_registrations do
-    closest_event = closest_event()
+    closest_event_id = closest_event()
 
-    query =
-      from r in Registration,
-      join: v in Event, on: r.event_id == v.id,
-      where: r.active == true,
-      select: count(r.id)
-
-    Repo.one(query)  # `one()` because of `count()`
+    case closest_event_id do
+      nil -> 0
+      _ ->
+        Repo.one(
+          from r in Registration,
+          join: v in Event, on: r.event_id == ^closest_event.id,
+          where: r.active == true,
+          select: count(r.id)
+        )  # `one()` because of `count()`
+    end
   end
 
   def index(conn, _params) do

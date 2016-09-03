@@ -44,6 +44,9 @@ defmodule ElixirLangMoscow.Router do
     get "/suggest-talk", SuggestedTalkController, :new
     post "/suggest-talk", SuggestedTalkController, :create
 
+    # Sitemap:
+    get "/sitemap.xml", SitemapController, :index
+
     # Index page:
     get "/", PageController, :index
   end
