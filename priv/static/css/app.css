@@ -1315,9 +1315,9 @@ img {
   @media screen and (max-width: 768px) {
     /* line 23, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
     .side-nav__component .side-nav-list > li {
-      padding-left: 0; } }
+      padding-left: 5px; } }
   @media screen and (max-width: 768px) {
-    /* line 28, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
+    /* line 30, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_navigation.scss */
     .side-nav__component .side-nav-list > li::after {
       display: none;
       visibility: hidden; } }

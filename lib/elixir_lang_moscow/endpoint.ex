@@ -9,7 +9,7 @@ defmodule ElixirLangMoscow.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/", from: :elixir_lang_moscow, gzip: false,
-    only: ~w(css fonts images themes js favicons favicon.ico robots.txt humans.txt b93407e6a2ac.html)
+    only: ~w(css fonts images themes js favicons favicon.ico robots.txt humans.txt)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

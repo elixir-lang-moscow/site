@@ -52,6 +52,8 @@ defmodule ElixirLangMoscow.PageController do
     end
   end
 
+  # Public functions
+
   def index(conn, _params) do
     render(conn, "index.html",
       events: recent_events(),
@@ -59,5 +61,9 @@ defmodule ElixirLangMoscow.PageController do
       active_registrations: active_registrations(),
       recent_talks: recent_talks(),
     )
+  end
+
+  def contacts(conn, _params) do
+    render(conn, "contacts.html")
   end
 end

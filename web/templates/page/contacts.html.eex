@@ -1,0 +1,21 @@
+<h1><%= gettext "Contacts" %></h1>
+
+<h2>Email</h2>
+<p>
+  <a href="mailto:contact@elixir-lang.moscow">contact@elixir-lang.moscow</a>
+</p>
+
+<h2>meetup.com</h2>
+<p>
+  <a href="http://www.meetup.com/elixir_lang_moscow/">meetup.com/elixir_lang_moscow</a>
+</p>
+
+<h2>Slack</h2>
+<p>
+  <a href="https://elixir-slackin.herokuapp.com/"><%= gettext "Join" %></a>, channel: #moscow
+</p>
+
+<h2>GitHub</h2>
+<p>
+  <a href="https://github.com/elixir-lang-moscow">@elixir-lang-moscow</a>
+</p>

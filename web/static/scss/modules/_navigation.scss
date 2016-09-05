@@ -22,7 +22,9 @@
 
     > li {
       @include max-width($screen-bg) {
-        padding-left: 0;
+        // quickfix (text will not collapse) for browsers where
+        // `justify-content: space-between` is not working:
+        padding-left: 5px;
       }
 
       &::after {

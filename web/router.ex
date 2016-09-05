@@ -47,6 +47,9 @@ defmodule ElixirLangMoscow.Router do
     # Sitemap:
     get "/sitemap.xml", SitemapController, :index
 
+    # Pages:
+    get "/contacts", PageController, :contacts
+
     # Index page:
     get "/", PageController, :index
   end
