@@ -29,7 +29,7 @@
     <%= error_tag f, :message %>
   </div>
 
-  <%= raw Recaptcha.display %>
+  <%= raw Recaptcha.Template.display %>
 
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary btn-ghost" %>

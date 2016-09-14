@@ -11,14 +11,14 @@ defmodule ElixirLangMoscow.SuggestedTalkController do
   end
 
   def create(conn, %{"suggested_talk" => suggested_talk_params} = params) do
-    verification = Recaptcha.verify(conn.remote_ip, params["g-recaptcha-response"])
+    {verification, _} = Recaptcha.verify(params["g-recaptcha-response"])
 
     if verification == :ok or Mix.env == :test  do
       create_suggested_talk(conn, suggested_talk_params)
     else
       conn
       |> put_flash(:error, "Recaptcha is invalid")
-      |> render("new.html", changeset: SuggestedTalk.changeset(%SuggestedTalk{}))        
+      |> render("new.html", changeset: SuggestedTalk.changeset(%SuggestedTalk{}))
     end
   end
 

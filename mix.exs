@@ -5,13 +5,13 @@ defmodule ElixirLangMoscow.Mixfile do
     [
       app: :elixir_lang_moscow,
       version: "0.0.1",
-      elixir: "~> 1.2",
+      elixir: "~> 1.3",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
-      aliases: aliases,
-      deps: deps,
+      aliases: aliases(),
+      deps: deps(),
 
       # Test coverage:
       test_coverage: [tool: ExCoveralls],
@@ -56,7 +56,7 @@ defmodule ElixirLangMoscow.Mixfile do
       {:cowboy, "~> 1.0"},
 
       # Recaptcha
-      {:recaptcha, "~> 1.1.0"},
+      {:recaptcha, "~> 2.0"},
 
       # Model helpers:
       {:ecto_autoslug_field, "~> 0.1"},
