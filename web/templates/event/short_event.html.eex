@@ -1,6 +1,14 @@
 
-<div class="alert alert-info">
+<%
+  class_name = if (@event.on_air), do: "alert-error", else: "alert-info"
+%>
+
+<div class="alert <%= class_name %>">
   <a href="<%= event_path(@conn, :show, @event.id) %>">
     <%= @event.name %></a>, <%= @event.location %>:
-  <%= pretty_time(@event.time_at) %>
+  <%= if (@event.on_air) == true do %>
+    <%= gettext "On Air" %>
+  <% else %>
+    <%= pretty_time(@event.time_at) %>
+  <% end %>
 </div>

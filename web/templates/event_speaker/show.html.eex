@@ -19,9 +19,7 @@
     <h2><%= gettext "Video" %></h2>
 
     <%= if has_video?(@event_speaker) do %>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/<%= @event_speaker.video_link %>"
-        frameborder="0" allowfullscreen></iframe>
+      <%= raw embed_youtube(@event_speaker.video_link) %>
     <% else %>
       <p><%= gettext "No video yet" %></p>
     <% end %>

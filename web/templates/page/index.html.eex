@@ -3,12 +3,20 @@
 
   <%= if @closest_event != nil do %>
 
-    <h2><%= gettext "Closest event" %></h2>
+    <%= if @closest_event.on_air == true do %>
+      <h2><%= gettext "Current event" %></h2>
+    <% else %>
+      <h2><%= gettext "Closest event" %></h2>
+    <% end %>
 
     <div class="closest-event">
       <%= render ElixirLangMoscow.EventView, "short_event.html",
              event: @closest_event, conn: @conn %>
     </div>
+
+    <%= if has_translation?(@closest_event) do %>
+      <%= raw embed_youtube(@closest_event.translation_link) %>
+    <% end %>
 
     <%= if not Enum.empty?(@closest_event.event_speakers) do %>
       <h3><%= gettext "Talks" %></h3>
@@ -21,11 +29,14 @@
       <% end %>
     <% end %>
 
-    <h3><%= gettext "Participate" %></h3>
+    <%= if @closest_event.on_air != true do %>
+      <h3><%= gettext "Participate" %></h3>
 
-    <a class="btn btn-primary btn-ghost" href="<%= @closest_event.registration_link %>">
-      <%= gettext "Register" %>
-    </a>
+      <a class="btn btn-primary btn-ghost"
+         href="<%= @closest_event.registration_link %>">
+        <%= gettext "Register" %>
+      </a>
+    <% end %>
 
   <% end %>
 </section>

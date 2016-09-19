@@ -12,4 +12,12 @@ defmodule ElixirLangMoscow.Utils do
       |> String.downcase
     Enum.member?(allowed, file_extension)
   end
+
+  def embed_youtube(link) do
+    """
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/#{link}"
+      frameborder="0" allowfullscreen></iframe>
+    """
+  end
 end
