@@ -21,7 +21,7 @@ defmodule ElixirLangMoscow.ExAdmin.Speaker do
       inputs do
         input admin, :name
         input admin, :company
-        input admin, :slug, type: :text
+        # input admin, :slug, type: :text
         input admin, :avatar, type: :file
       end
     end

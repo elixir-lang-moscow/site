@@ -15,12 +15,13 @@ defmodule ElixirLangMoscow.EventSpeaker do
 
   schema "event_speakers" do
     # TODO: add field :order
-    
+
     field :title, :string
     field :description, :string
     field :slug, EventSpeakerSlug.Type
 
     field :video_link, :string
+    field :speakerdeck_id, :string, default: nil
 
     belongs_to :event, ElixirLangMoscow.Event
     belongs_to :speaker, ElixirLangMoscow.Speaker
@@ -29,7 +30,7 @@ defmodule ElixirLangMoscow.EventSpeaker do
   end
 
   @required_fields ~w(title speaker_id event_id)
-  @optional_fields ~w(slug description video_link)
+  @optional_fields ~w(slug description video_link speakerdeck_id)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

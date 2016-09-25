@@ -20,4 +20,13 @@ defmodule ElixirLangMoscow.Utils do
       frameborder="0" allowfullscreen></iframe>
     """
   end
+
+  def embed_speakerdeck(slides_id) do
+    """
+    <script async class="speakerdeck-embed"
+      data-id="#{slides_id}" 
+      data-ratio="1.33333333333333"
+      src="//speakerdeck.com/assets/embed.js"></script>
+    """
+  end
 end

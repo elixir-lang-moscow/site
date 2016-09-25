@@ -21,8 +21,9 @@ defmodule ElixirLangMoscow.ExAdmin.EventSpeaker do
       inputs do
         input admin, :title
         input admin, :description
-        input admin, :slug, type: :text
+        # input admin, :slug, type: :text
         input admin, :video_link
+        input admin, :speakerdeck_id
 
         input admin, :event, collection: Repo.all(Event)
         input admin, :speaker, collection: Repo.all(Speaker)
