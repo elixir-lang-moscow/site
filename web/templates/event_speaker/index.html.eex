@@ -1,0 +1,14 @@
+
+<div class="event_speakers__component">
+  <%= for talk <- @event.event_speakers do %>
+    <%= render ElixirLangMoscow.EventSpeakerView, "talk.html",
+          conn: @conn,
+          event: @event,
+          event_speaker: talk %>
+  <% end %>
+
+  <%= if @event.looking_for_speakers == true do %>
+    <%= render ElixirLangMoscow.EventSpeakerView, "searching.html",
+          conn: @conn %>
+  <% end %>
+</div>

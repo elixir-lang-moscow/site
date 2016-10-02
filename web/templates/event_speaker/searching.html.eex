@@ -1,0 +1,22 @@
+<div class="media talk__component">
+
+  <div class="media-left">
+    <div class="talk-person-image">
+      <img src="<%= static_path(@conn, "/images/question.jpg") %>"
+           alt="<%= gettext "searching for speaker" %>"
+           title="<%= gettext "searching for speaker" %>" />
+    </div>
+  </div>
+
+  <div class="media-body">
+    <div class="media-heading">
+      <%= gettext "We are searching for more speakers!" %>
+    </div>
+    <div class="media-content">
+      <%= gettext "Please" %>,
+      <a href="<%= suggested_talk_path(@conn, :new) %>"><%= gettext "drop us a line" %></a>
+      <%= gettext "if you want to become a speaker" %>
+    </div>
+  </div>
+
+</div>

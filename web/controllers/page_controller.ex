@@ -6,11 +6,13 @@ defmodule ElixirLangMoscow.PageController do
   alias ElixirLangMoscow.Registration
 
   defp closest_event do
+    speakers_query = EventSpeaker.query_order()
+
     query =
       from e in Event,
       order_by: [desc: e.time_at],
       limit: 1,
-      preload: [:speakers]
+      preload: [:speakers, event_speakers: ^speakers_query]
 
     Repo.one(query)
   end
@@ -37,28 +39,12 @@ defmodule ElixirLangMoscow.PageController do
     Repo.all(query)
   end
 
-  defp active_registrations do
-    closest_event_id = closest_event()
-
-    case closest_event_id do
-      nil -> 0
-      _ ->
-        Repo.one(
-          from r in Registration,
-          join: v in Event, on: r.event_id == ^closest_event.id,
-          where: r.active == true,
-          select: count(r.id)
-        )  # `one()` because of `count()`
-    end
-  end
-
   # Public functions
 
   def index(conn, _params) do
     render(conn, "index.html",
       events: recent_events(),
       closest_event: closest_event(),
-      active_registrations: active_registrations(),
       recent_talks: recent_talks(),
     )
   end

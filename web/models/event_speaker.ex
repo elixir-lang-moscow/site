@@ -14,11 +14,11 @@ defmodule ElixirLangMoscow.EventSpeaker do
   alias ElixirLangMoscow.EventSpeakerSlug
 
   schema "event_speakers" do
-    # TODO: add field :order
-
     field :title, :string
     field :description, :string
     field :slug, EventSpeakerSlug.Type
+
+    field :order, :integer, default: 1
 
     field :video_link, :string
     field :speakerdeck_id, :string, default: nil
@@ -30,7 +30,7 @@ defmodule ElixirLangMoscow.EventSpeaker do
   end
 
   @required_fields ~w(title speaker_id event_id)
-  @optional_fields ~w(slug description video_link speakerdeck_id)
+  @optional_fields ~w(slug description video_link speakerdeck_id order)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
@@ -46,4 +46,6 @@ defmodule ElixirLangMoscow.EventSpeaker do
     |> EventSpeakerSlug.maybe_generate_slug
     |> EventSpeakerSlug.unique_constraint
   end
+
+  def query_order, do: from s in __MODULE__, order_by: s.order
 end

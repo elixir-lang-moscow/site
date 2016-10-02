@@ -14,6 +14,9 @@ defmodule ElixirLangMoscow.Event do
     field :translation_link, :string
     field :visible, :boolean, defaule: true
 
+    field :registration_opened, :boolean, default: false
+    field :looking_for_speakers, :boolean, default: false
+
     has_many :registrations, ElixirLangMoscow.Registration
 
     has_many :event_speakers, ElixirLangMoscow.EventSpeaker
@@ -29,7 +32,7 @@ defmodule ElixirLangMoscow.Event do
     name location time_at uid registration_link max_registrations
     on_air visible
   )
-  @optional_fields ~w(translation_link)
+  @optional_fields ~w(translation_link registration_opened looking_for_speakers)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

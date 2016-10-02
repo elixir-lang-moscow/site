@@ -21,15 +21,13 @@
     <%= if not Enum.empty?(@closest_event.event_speakers) do %>
       <h3><%= gettext "Talks" %></h3>
 
-      <%= for talk <- @closest_event.event_speakers do %>
-        <%= render ElixirLangMoscow.EventSpeakerView, "talk.html",
-              conn: @conn,
-              event: @closest_event,
-              event_speaker: talk %>
-      <% end %>
+      <%= render ElixirLangMoscow.EventSpeakerView, "index.html",
+            conn: @conn,
+            event: @closest_event %>
     <% end %>
 
-    <%= if @closest_event.on_air != true do %>
+    <%= if @closest_event.on_air == false and
+        @closest_event.registration_opened == true do %>
       <h3><%= gettext "Participate" %></h3>
 
       <a class="btn btn-primary btn-ghost"
