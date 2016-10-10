@@ -1382,5 +1382,9 @@ main footer.footer__component {
     padding: 10px;
     max-width: 200px; }
 
+/* line 3, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_event_speaker.scss */
+.event_speakers__component {
+  margin-bottom: 1.75rem; }
+
 
 /*# sourceMappingURL=app.css.map*/
