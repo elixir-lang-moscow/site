@@ -1,6 +1,6 @@
 # ElixirLangMoscow
 
-[![Build Status](https://travis-ci.org/elixir-lang-moscow/site.svg?branch=master)](https://travis-ci.org/elixir-lang-moscow/site) [![Coverage Status](https://coveralls.io/repos/github/elixir-lang-moscow/site/badge.svg?branch=master)](https://coveralls.io/github/elixir-lang-moscow/site?branch=master) [![Docker pulls](https://img.shields.io/docker/pulls/sobolevn/elixir_lang_moscow.svg)](https://hub.docker.com/r/sobolevn/elixir_lang_moscow/~/dockerfile/)
+[![Build Status](https://travis-ci.org/elixir-lang-moscow/site.svg?branch=master)](https://travis-ci.org/elixir-lang-moscow/site) [![Coverage Status](https://coveralls.io/repos/github/elixir-lang-moscow/site/badge.svg?branch=master)](https://coveralls.io/github/elixir-lang-moscow/site?branch=master) [![Docker pulls](https://img.shields.io/docker/pulls/sobolevn/elixir_lang_moscow.svg)](https://hub.docker.com/r/sobolevn/elixir_lang_moscow/~/dockerfile/) [![](https://images.microbadger.com/badges/image/sobolevn/elixir_lang_moscow.svg)](https://microbadger.com/images/sobolevn/elixir_lang_moscow "Get your own image badge on microbadger.com")
 
 [![ElixirLangMoscow](https://raw.githubusercontent.com/elixir-lang-moscow/site/master/web/static/assets/images/elixir-lang-moscow-logo.png)](https://elixir-lang-moscow.herokuapp.com/)
 
@@ -80,3 +80,4 @@ mix command.create.admin username:$YOUR_NAME password:$YOUR_PASS password_confir
   * Docs: http://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+ 
