@@ -75,11 +75,8 @@ config :elixir_lang_moscow, ElixirLangMoscow.Mailer,
 
 # Configure ReCaptcha
 config :recaptcha,
-    api_config: %{
-      verify_url: "https://www.google.com/recaptcha/api/siteverify",
-      public_key: "6Lc1LCgTAAAAABEo_tgurMCr8iX0giAb1keRx4NP",
-      private_key: System.get_env("RECAPTCHA_KEY"),
-    }
+    public_key: {:system, "RECAPTCHA_PUBLIC_KEY"},
+    secret: {:system, "RECAPTCHA_PRIVATE_KEY"}
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

@@ -24,7 +24,7 @@ We do use a bunch of integrations, so if you want to replicate the whole project
   - Amazon AWS: set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
   - Mailgun: set `MAILGUN_API_KEY`
   - Timepad: set `TIMEPAD_KEY`
-  - ReCaptcha: set `RECAPTCHA_KEY`
+  - ReCaptcha: set `RECAPTCHA_PRIVATE_KEY` and `RECAPTCHA_PUBLIC_KEY`
 
 ## Docker
 
@@ -80,4 +80,4 @@ mix command.create.admin username:$YOUR_NAME password:$YOUR_PASS password_confir
   * Docs: http://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
- 
+
