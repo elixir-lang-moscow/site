@@ -13,6 +13,8 @@ defmodule ElixirLangMoscow.Utils do
     Enum.member?(allowed, file_extension)
   end
 
+  def link_youtube(link), do: "https://www.youtube.com/watch?v=#{link}"
+
   def embed_youtube(link) do
     """
     <iframe width="560" height="315"
@@ -24,7 +26,7 @@ defmodule ElixirLangMoscow.Utils do
   def embed_speakerdeck(slides_id) do
     """
     <script async class="speakerdeck-embed"
-      data-id="#{slides_id}" 
+      data-id="#{slides_id}"
       data-ratio="1.33333333333333"
       src="//speakerdeck.com/assets/embed.js"></script>
     """

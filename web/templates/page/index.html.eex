@@ -15,7 +15,12 @@
     </div>
 
     <%= if has_translation?(@closest_event) do %>
-      <%= raw embed_youtube(@closest_event.translation_link) %>
+      <div class="alert alert-info">
+        <%= gettext "Translation" %>:
+        <a href="<%= link_youtube(@closest_event.translation_link) %>">
+          <%= link_youtube(@closest_event.translation_link) %>
+        </a>
+      </div>
     <% end %>
 
     <%= if not Enum.empty?(@closest_event.event_speakers) do %>
