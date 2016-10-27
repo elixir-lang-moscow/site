@@ -33,7 +33,7 @@ To run app in `docker` container:
   0. Clone the repo
   1. Run `docker-compose build`
   2. Run `docker-compose run web mix test` to test the installation
-  3. Run `docker-compose run web mix ecto.setup`
+  3. Run `docker-compose run web mix ecto.setup && mix ecto.migrate`
   4. Run `dcoker-compose up`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
@@ -61,7 +61,7 @@ And now, run:
   0. Clone the repo
   1. Run `mix deps.get && mix compile`
   2. Run `mix test` to ensure that everything is fine
-  3. Run `mix ecto.setup`
+  3. Run `mix ecto.setup && mix ecto.migrate` to setup the database
   4. Install Node.js dependencies with `npm install`
   5. Start Phoenix endpoint with `mix phoenix.server`. Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
