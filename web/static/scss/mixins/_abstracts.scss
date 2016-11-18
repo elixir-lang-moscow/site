@@ -28,6 +28,8 @@
     .cell {
       padding-bottom: $spacer;
       padding-right: $spacer;
+
+      display: flex;
     }
   }
 }

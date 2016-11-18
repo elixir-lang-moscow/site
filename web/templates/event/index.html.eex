@@ -2,7 +2,7 @@
 
 <div class="events__component">
 
-  <div class="grid -middle">
+  <div class="grid">
   <%= for event <- @events do %>
 
       <div class="cell -6of12">
