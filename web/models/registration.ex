@@ -17,7 +17,15 @@ defmodule ElixirLangMoscow.Registration do
     timestamps
   end
 
-  @required_fields ~w(first_name last_name email event_id uid code barcode)
+  @required_fields ~w(
+    first_name
+    last_name
+    email
+    event_id
+    uid
+    code
+    barcode
+  )
   @optional_fields ~w(company active)
 
   @doc """

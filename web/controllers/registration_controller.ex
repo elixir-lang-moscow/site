@@ -32,11 +32,13 @@ defmodule ElixirLangMoscow.RegistrationController do
 
   defp validate_request(conn, timepad_body) when is_binary(timepad_body) do
     timepad_key =
-      Application.get_env(:elixir_lang_moscow, :timepad)
+      :elixir_lang_moscow
+      |> Application.get_env(:timepad)
       |> Keyword.get(:key)
 
     incoming_value =
-      :crypto.hmac(:sha, timepad_key, timepad_body)
+      :sha
+      |> :crypto.hmac(timepad_key, timepad_body)
       |> Base.encode16
       |> String.downcase
 

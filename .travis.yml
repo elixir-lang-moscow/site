@@ -16,6 +16,7 @@ env: MIX_ENV=test
 
 script:
   - mix coveralls.travis
+  - mix credo --only warning,refactor,consistency
 
 deploy:
   provider: heroku

@@ -3,7 +3,11 @@
 <div class="event__component">
   <section>
     <h2><%= @event.location %></h2>
-    <%= render "event.html", event: @event, conn: @conn %>
+    <%= render "event.html", conn: @conn, event: @event %>
+  </section>
+
+  <section>
+    <%= render "registration.html", conn: @conn, event: @event %>
   </section>
 
   <section>

@@ -24,7 +24,8 @@ defmodule ElixirLangMoscow.EventController do
       |> Ecto.Query.preload(:speaker)
 
     event =
-      Repo.get_by!(Event, [id: id, visible: true])
+      Event
+      |> Repo.get_by!([id: id, visible: true])
       |> Repo.preload([
         event_speakers: speakers_query,
       ])

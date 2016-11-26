@@ -29,6 +29,10 @@ defmodule ElixirLangMoscow.Emails do
   def send_email(email), do: Mailer.deliver(email)
 
   def create_and_send(object, action, :async) do
-    Task.start(fn -> create(object, action) |> send_email() end)
+    Task.start(fn ->
+      object
+      |> create(action)
+      |> send_email()
+    end)
   end
 end

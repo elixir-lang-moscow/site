@@ -1,0 +1,8 @@
+<%= if @event.on_air == false and @event.registration_opened == true do %>
+  <h3><%= gettext "Participate" %></h3>
+
+  <a class="btn btn-primary btn-ghost"
+     href="<%= @event.registration_link %>">
+    <%= gettext "Register" %>
+  </a>
+<% end %>

@@ -29,10 +29,21 @@ defmodule ElixirLangMoscow.Event do
   end
 
   @required_fields ~w(
-    name location time_at uid registration_link max_registrations
-    on_air visible
+    name
+    location
+    time_at
+    uid
+    registration_link
+    max_registrations
+    on_air
+    visible
   )
-  @optional_fields ~w(translation_link registration_opened looking_for_speakers)
+
+  @optional_fields ~w(
+    translation_link
+    registration_opened
+    looking_for_speakers
+  )
 
   @doc """
   Creates a changeset based on the `model` and `params`.

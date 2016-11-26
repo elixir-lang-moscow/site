@@ -6,6 +6,8 @@ defmodule ElixirLangMoscow.SitemapView do
   end
 
   def last_update_date(collection) do
-    List.first(collection) |> date_format()
+    collection
+    |> List.first()
+    |> date_format()
   end
 end

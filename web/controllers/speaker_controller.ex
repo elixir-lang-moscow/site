@@ -10,7 +10,8 @@ defmodule ElixirLangMoscow.SpeakerController do
 
   def show(conn, %{"id" => slug}) do
     speaker =
-      Repo.get_by!(Speaker, slug: slug)
+      Speaker
+      |> Repo.get_by!(slug: slug)
       |> Repo.preload([{:event_speakers, :speaker}, :events])
     render(conn, "show.html", speaker: speaker)
   end

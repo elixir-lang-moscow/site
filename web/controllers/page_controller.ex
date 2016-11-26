@@ -3,7 +3,6 @@ defmodule ElixirLangMoscow.PageController do
 
   alias ElixirLangMoscow.Event
   alias ElixirLangMoscow.EventSpeaker
-  alias ElixirLangMoscow.Registration
 
   defp closest_event do
     speakers_query = EventSpeaker.query_order()
@@ -23,7 +22,7 @@ defmodule ElixirLangMoscow.PageController do
       from e in EventSpeaker,
       join: v in Event, on: e.event_id == v.id,
       where: v.time_at < ^now and v.visible == true,
-      order_by: [v.time_at, e.title],
+      order_by: [desc: v.time_at, asc: e.order],
       limit: 10,
       preload: [:speaker, :event]
 
@@ -34,7 +33,8 @@ defmodule ElixirLangMoscow.PageController do
     now = Ecto.DateTime.utc
     query =
       from e in Event,
-      where: e.time_at < ^now
+      where: e.time_at < ^now,
+      order_by: [desc: e.time_at]
 
     Repo.all(query)
   end

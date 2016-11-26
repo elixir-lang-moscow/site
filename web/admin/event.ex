@@ -32,7 +32,10 @@ defmodule ElixirLangMoscow.ExAdmin.Event do
         row :location
         row :time_at
         row :uid
+        row :on_air
+        row :looking_for_speakers
         row "Registration link", &(a(&1.registration_link, href: &1.registration_link))
+        row :visible
       end
 
       panel "Partners" do

@@ -84,7 +84,7 @@ defmodule ElixirLangMoscow.Mixfile do
       {:excoveralls, "~> 0.5", only: :test},
 
       # Lint:
-      {:dogma, "~> 0.1", only: [:dev, :test]},
+      {:credo, "~> 0.5", only: [:dev, :test]}
     ]
   end
 

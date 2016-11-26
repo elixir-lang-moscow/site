@@ -30,7 +30,12 @@ defmodule ElixirLangMoscow.EventSpeaker do
   end
 
   @required_fields ~w(title speaker_id event_id)
-  @optional_fields ~w(slug description video_link speakerdeck_id order)
+  @optional_fields ~w(
+    slug
+    description
+    video_link
+    speakerdeck_id order
+  )
 
   @doc """
   Creates a changeset based on the `model` and `params`.

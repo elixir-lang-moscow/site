@@ -31,15 +31,9 @@
             event: @closest_event %>
     <% end %>
 
-    <%= if @closest_event.on_air == false and
-        @closest_event.registration_opened == true do %>
-      <h3><%= gettext "Participate" %></h3>
-
-      <a class="btn btn-primary btn-ghost"
-         href="<%= @closest_event.registration_link %>">
-        <%= gettext "Register" %>
-      </a>
-    <% end %>
+    <%= render ElixirLangMoscow.EventView, "registration.html",
+          conn: @conn,
+          event: @closest_event %>
 
   <% end %>
 </section>

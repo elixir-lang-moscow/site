@@ -5,7 +5,8 @@ defmodule ElixirLangMoscow.EventSpeakerController do
 
   def show(conn, %{"slug" => slug}) do
     event_speaker =
-      Repo.get_by!(EventSpeaker, slug: slug)
+      EventSpeaker
+      |> Repo.get_by!(slug: slug)
       |> Repo.preload([:event, :speaker])
 
     render(conn, "show.html", event_speaker: event_speaker)

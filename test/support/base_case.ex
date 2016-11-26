@@ -5,7 +5,7 @@ defmodule ElixirLangMoscow.BaseTest do
   alias ElixirLangMoscow.Event
   alias ElixirLangMoscow.Registration
   alias ElixirLangMoscow.SuggestedTalk
-  alias ElixirLangMoscow.Partner
+  # alias ElixirLangMoscow.Partner
 
 
   def valid_event do
