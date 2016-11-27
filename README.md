@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/elixir-lang-moscow/site.svg?branch=master)](https://travis-ci.org/elixir-lang-moscow/site)
 [![Coverage Status](https://coveralls.io/repos/github/elixir-lang-moscow/site/badge.svg?branch=master)](https://coveralls.io/github/elixir-lang-moscow/site?branch=master)
+[![Ebert](https://ebertapp.io/github/elixir-lang-moscow/site.svg)](https://ebertapp.io/github/elixir-lang-moscow/site)
 [![Docker pulls](https://img.shields.io/docker/pulls/sobolevn/elixir_lang_moscow.svg)](https://hub.docker.com/r/sobolevn/elixir_lang_moscow/~/dockerfile/)
 [![Docker size](https://images.microbadger.com/badges/image/sobolevn/elixir_lang_moscow.svg)](https://microbadger.com/images/sobolevn/elixir_lang_moscow)
 

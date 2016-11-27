@@ -2,30 +2,30 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: "js/app.js",
+      joinTo: 'js/app.js'
 
       // To use a separate vendor.js bundle, specify two files path
       // https://github.com/brunch/brunch/blob/stable/docs/config.md#files
       // joinTo: {
-      //  "js/app.js": /^(web\/static\/js)/,
-      //  "js/vendor.js": /^(web\/static\/vendor)|(deps)/
+      //  'js/app.js': /^(web\/static\/js)/,
+      //  'js/vendor.js': /^(web\/static\/vendor)|(deps)/
       // }
       //
       // To change the order of concatenation of files, explicitly mention here
       // https://github.com/brunch/brunch/tree/master/docs#concatenation
     },
     stylesheets: {
-      joinTo: "css/app.css"
+      joinTo: 'css/app.css'
     },
     templates: {
-      joinTo: "js/app.js"
+      joinTo: 'js/app.js'
     }
   },
 
   conventions: {
     // This option sets where we should place non-css and non-js assets in.
-    // By default, we set this to "/web/static/assets". Files in this directory
-    // will be copied to `paths.public`, which is "priv/static" by default.
+    // By default, we set this to '/web/static/assets'. Files in this directory
+    // will be copied to `paths.public`, which is 'priv/static' by default.
     assets: /^(web\/static\/assets)/
   },
 
@@ -33,12 +33,12 @@ exports.config = {
   paths: {
     // Dependencies and current project directories to watch
     watched: [
-      "web/static",
-      "test/static"
+      'web/static',
+      'test/static'
     ],
 
     // Where to compile files to
-    public: "priv/static"
+    public: 'priv/static'
   },
 
   // Configure your plugins
@@ -48,11 +48,12 @@ exports.config = {
       ignore: [/web\/static\/vendor/]
     },
     sass: {
+      mode: 'native',
       options: {
         allowCache: true,
         includePaths: [
-          "node_modules/hack/dist",
-          "node_modules/normalize.css",
+          'node_modules/hack/dist',
+          'node_modules/normalize.css'
         ]
       }
     },
@@ -65,8 +66,8 @@ exports.config = {
 
   modules: {
     autoRequire: {
-      "js/app.js": [
-        "web/static/js/app"
+      'js/app.js': [
+        'web/static/js/app'
       ]
     }
   },
@@ -75,6 +76,6 @@ exports.config = {
     enabled: true,
     // Whitelist the npm deps to be pulled in as front-end assets.
     // All other deps in package.json will be excluded from the bundle.
-    whitelist: ["hack", "normalize.css"]
+    whitelist: ['hack', 'normalize.css']
   }
-};
+}

@@ -2,7 +2,7 @@
 
 <div class="speakers__component">
 
-  <div class="grid -middle">
+  <div class="grid">
 
     <%= for speaker <- @speakers do %>
     <div class="cell -4of12">

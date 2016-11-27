@@ -1,0 +1,5 @@
+priv/
+deps/
+node_modules/
+cover/
+_build/
