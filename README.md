@@ -66,7 +66,7 @@ And now, run:
   1. Run `mix deps.get && mix compile`
   2. Run `mix test` to ensure that everything is fine
   3. Run `mix ecto.setup && mix ecto.migrate` to setup the database
-  4. Install Node.js dependencies with `npm install`
+  4. Install Node.js dependencies with `yarn install` (you may need to install `yarn`)
   5. Start Phoenix endpoint with `mix phoenix.server`. Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Creating admin account
@@ -76,6 +76,20 @@ Run:
 ```bash
 mix command.create.admin username:$YOUR_NAME password:$YOUR_PASS password_confirmation:$YOUR_PASS
 ```
+
+## Development
+
+### Frontend
+
+We use `hackcss` as a css-framework. We use `yarn` as a default package manager for frontend. And `brunch` as an assets-builder.
+
+### Linters
+
+This project uses several linters to lint 'all the things!!!':
+
+- `credo` to lint `elixir` code
+- `eslint` to lint `javascript` code
+- `sass-lint` to lint `scss` styles
 
 ## Learn more
 

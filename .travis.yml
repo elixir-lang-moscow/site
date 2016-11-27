@@ -14,9 +14,14 @@ addons:
 
 env: MIX_ENV=test
 
+install:
+  - npm install -g yarn
+  - yarn install  # yarn is the default package manager
+
 script:
-  - mix coveralls.travis
-  - mix credo --only warning,refactor,consistency
+  - mix coveralls.travis  # running ExUnit and pushing coverage
+  - mix credo --only warning,refactor,consistency  # linting elixir
+  - npm run lint  # linting js and scss
 
 deploy:
   provider: heroku
