@@ -12,9 +12,15 @@ addons:
   hosts:
     - db
 
-env: MIX_ENV=test
+cache: yarn
 
-install:
+env:
+  - MIX_ENV="test"; TRAVIS_NODE_VERSION="5.11.1"
+
+before_install:
+  - nvm install $TRAVIS_NODE_VERSION
+
+before_script:
   - npm install -g yarn
   - yarn install  # yarn is the default package manager
 
