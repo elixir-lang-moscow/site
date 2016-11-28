@@ -27,7 +27,7 @@ config :phoenix, :generators,
 # Configure Auth
 config :guardian, Guardian,
   issuer: "ElixirLangMoscow",
-  ttl: { 30, :days },
+  ttl: {30, :days},
   verify_issuer: true,  # optional
   secret_key: "<guardian development secret key>",
   serializer: ElixirLangMoscow.GuardianSerializer

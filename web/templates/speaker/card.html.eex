@@ -8,8 +8,8 @@
   <div class="card-content">
     <div class="inner">
       <img src="<%= avatar_url(@speaker) %>"
-           alt="<%= @speaker.name %>(<%= @speaker.company %>)"
-           title="<%= @speaker.name %>(<%= @speaker.company %>)" />
+           alt="<%= speaker_info(@speaker) %>"
+           title="<%= speaker_info(@speaker) %>" />
       <%= if Map.has_key?(@speaker, :company) do %>
         <p>
           <%= @speaker.company %>

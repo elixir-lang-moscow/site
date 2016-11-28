@@ -6,6 +6,11 @@
 .speakers__component {
   @extend %base_card_component;
   @extend %wraped_grid_component;
+
+  .card {
+    // Override for the default hackcss style:
+    width: 100%;
+  }
 }
 
 

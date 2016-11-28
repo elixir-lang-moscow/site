@@ -1353,6 +1353,10 @@ main footer.footer__component {
     padding-right: 10px;
     display: flex; }
 
+/* line 10, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/modules/_speakers.scss */
+.speakers__component .card {
+  width: 100%; }
+
 /* line 9, /Users/sobolev/Documents/elixir/elixir_lang_moscow/web/static/scss/mixins/_abstracts.scss */
 .speakers__component .card .inner img, .speaker__component .card .inner img {
   margin: 0 auto; }
