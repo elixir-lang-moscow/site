@@ -28,4 +28,12 @@ defmodule ElixirLangMoscow.EmailsTest do
 
     assert Enum.any?(mailbox, fn(v) -> v.headers["Message-ID"] == id end)
   end
+
+  test "email is sent on talk suggestion", %{suggested_talk: suggested_talk} do
+    email = Emails.create(suggested_talk, :suggested_talk)
+    {:ok, %{id: id}} = Emails.send_email(email)
+    mailbox = Swoosh.Adapters.Local.Storage.Memory.all()
+
+    assert Enum.any?(mailbox, fn(v) -> v.headers["Message-ID"] == id end)
+  end
 end

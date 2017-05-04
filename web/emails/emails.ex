@@ -8,7 +8,7 @@ defmodule ElixirLangMoscow.Emails do
 
   @default_from {"Elixir Moscow Team", "no-reply@elixir-lang.moscow"}
 
-  def create(%SuggestedTalk{} = talk, :sugested_talk) do
+  def create(%SuggestedTalk{} = talk, :suggested_talk) do
     new
     |> to("talk@elixir-lang.moscow")
     |> from(@default_from)
