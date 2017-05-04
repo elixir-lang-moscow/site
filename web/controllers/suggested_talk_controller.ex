@@ -2,6 +2,7 @@ defmodule ElixirLangMoscow.SuggestedTalkController do
   use ElixirLangMoscow.Web, :controller
 
   alias ElixirLangMoscow.SuggestedTalk
+  alias ElixirLangMoscow.Emails
 
   plug :scrub_params, "suggested_talk" when action in [:create]
 
@@ -26,7 +27,10 @@ defmodule ElixirLangMoscow.SuggestedTalkController do
     changeset = SuggestedTalk.changeset(%SuggestedTalk{}, suggested_talk_params)
 
     case Repo.insert(changeset) do
-      {:ok, _suggested_talk} ->
+      {:ok, suggested_talk} ->
+        Emails.create_and_send(
+          suggested_talk, :suggested_talk, :async)
+
         conn
         |> put_flash(:info, "Ok")
         |> redirect(to: suggested_talk_path(conn, :new))
