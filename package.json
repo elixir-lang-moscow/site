@@ -32,7 +32,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "hack": "^0.7.7",
     "javascript-brunch": "~1.8.0",
-    "node-sass": "^3.13.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^4.2.0",
     "phoenix": "file:deps/phoenix",
     "phoenix_html": "file:deps/phoenix_html",
